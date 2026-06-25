@@ -1,0 +1,52 @@
+:root {
+  --black: #111111;
+  --purple: #1e1823;
+  --orange: #fd9222;
+  --light: #fcf1e0;
+  --white: #fafafa;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  /*Don't add:
+  line-height: 
+  letter-spacing: 
+  parameters here - it doesn't handle inheritance correctly.
+  */
+}
+ol,
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+.header-logo {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.header-logo span {
+  font-style: italic;
+}
+.header-menu-link {
+  font-size: 14px;
+  font-weight: medium;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+.header-menu-link:is(:hover, :focus) {
+  color: var(--orange);
+}
+/* The same result as from the top entry:
+header-menu-link:hover,
+.header-menu-link:focus {
+  color: var(--orange);
+} */
+
+/* HERO */
