@@ -21,7 +21,8 @@ a {
   text-decoration: none;
 }
 
-/* HEADER */
+/* *              H E A D E R              */
+
 .header-logo {
   font-size: 18px;
   font-weight: bold;
@@ -44,9 +45,42 @@ a {
   color: var(--orange);
 }
 /* The same result as from the top entry:
-header-menu-link:hover,
+.header-menu-link:hover,
 .header-menu-link:focus {
-  color: var(--orange);
+  color: --orange;
 } */
 
-/* HERO */
+/* *                H E R O                 */
+
+.hero {
+  background: grey;
+}
+.hero h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+}
+.hero-btn-buy {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--orange);
+}
+.hero-link-how {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.hero-link-down {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+}
+
+/* *           A D V A N T A G E S             */
