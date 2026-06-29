@@ -1,12 +1,12 @@
 :root {
-  --primary: #111111;
+  --primary: #111111; /*17, 17, 17*/
   --secondary: #ffffff;
   --accent: #fd9222;
   --light-orange: #fcf1e0;
   --violet: #1e1823;
   --page-background: #e9e9e9;
   --secondary-for-rgba: 255, 255, 255;
-  --black-for-rgba: 17, 17, 17;
+  --primary-for-rgba: 17, 17, 17;
 }
 body {
   color: var(--primary);
@@ -19,10 +19,24 @@ body {
 }
 ol,
 ul {
+  margin-top: 0;
+  padding-left: 0;
+  margin-bottom: 0;
   list-style-type: none;
 }
 a {
+  color: inherit;
   text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .visually-hidden {
   position: absolute;
@@ -36,11 +50,21 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.section-title span {
+  color: var(--accent);
+}
 
-/* *              H E A D E R              */
+/* *          H E A D E R            */
 
 .header-logo-link {
-  color: inherit;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.11;
@@ -96,7 +120,7 @@ a {
   transform: scaleX(1);
 } */
 
-/* *                H E R O                 */
+/* *            H E R O               */
 
 .hero {
   color: var(--secondary);
@@ -129,7 +153,8 @@ a {
   letter-spacing: -0.03em;
 }
 
-/* *          A D V A N T A G E S            */
+/* *       A D V A N T A G E S        */
+
 .advantages {
   background-color: var(--violet);
   color: var(--secondary);
@@ -148,19 +173,11 @@ a {
   letter-spacing: -0.02em;
 }
 
-/* *                T A S T E                 */
+/* *            T A S T E             */
+
 .taste {
 }
 .taste-title {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.17;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  text-align: center;
-}
-.taste-title span {
-  color: var(--accent);
 }
 .taste-text {
   font-size: 14px;
@@ -185,4 +202,95 @@ a {
   text-transform: uppercase;
 }
 
-/* *                M A D E                 */
+/* *            M A D E              */
+
+.made {
+}
+.made-title {
+}
+
+.made-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.made-list {
+}
+.made-item {
+}
+.made-item-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+/* *            L O V E D             */
+
+.loved {
+}
+.loved-title {
+}
+.loved-list {
+}
+.loved-item {
+}
+.loved-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.loved-item p {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+.loved-btn {
+  font-family: inherit;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* *            F O O T E R             */
+
+.footer {
+  color: var(--secondary);
+  background-color: var(--violet);
+}
+.footer-main-text {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+}
+.footer-main-text span {
+  color: var(--accent);
+}
+.footer-contacts-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+}
+.footer-contacts {
+  font-style: normal;
+}
+.footer-contacts-list {
+}
+.footer-contacts-item {
+}
+.footer-contacts-link {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+.footer-nav {
+}
+.footer-nav-list {
+}
+.footer-nav-item {
+}
+.footer-nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
