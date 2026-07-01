@@ -87,15 +87,38 @@ button {
 
 /* *          H E A D E R            */
 
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px;
+}
+.header-nav {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
 .header-logo-link {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 .header-logo-link span {
   font-style: italic;
+}
+.header-menu {
+  display: flex;
+  gap: 24px;
 }
 .header-menu-link {
   color: inherit;
@@ -142,7 +165,10 @@ button {
 .header-menu-link:focus::after {
   transform: scaleX(1);
 } */
-
+.header-social {
+  display: flex;
+  gap: 18px;
+}
 /* *            H E R O               */
 
 .hero {
