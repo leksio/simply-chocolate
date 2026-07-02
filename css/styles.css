@@ -69,12 +69,12 @@ img {
 }
 .container {
   width: 100%;
-  max-width: 1200px;
-  /* better for flexibility, instead of just "width: 1200px;"*/
+  max-width: 1166px; /*layout + two paddings 15px*/
+  /* better for flexibility, instead of just "width: 1166px;"*/
   margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
-  border: 1px solid red; /* test */
+  padding-right: 15px;
+  padding-left: 15px;
+  /* border: 1px solid red; */
 }
 .section-title {
   font-size: 24px;
@@ -198,9 +198,9 @@ img {
 .hero-buttons {
   font-size: 14px;
   font-weight: 600;
-  padding: 14px 40px;
   border-width: 1px;
   border-radius: 100px;
+  padding: 14px 40px;
 }
 .hero-btn-buy {
   border-color: var(--accent);
@@ -223,21 +223,30 @@ img {
 /* *       A D V A N T A G E S        */
 
 .advantages {
-  background-color: var(--violet);
   color: var(--secondary);
+  background-color: var(--violet);
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .advantages-list {
+  display: flex;
+  gap: 88px;
+  justify-content: center;
+  padding-right: 18px;
+  padding-left: 18px;
 }
 .advantages-item {
+  width: calc((100% - 2 * 88px) / 3);
 }
 .advantages-subtitle {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 18px;
 }
 .advantages-item-text {
-  color: rgba(var(--secondary-for-rgba), 0.7);
   font-size: 14px;
   letter-spacing: -0.02em;
+  color: rgba(var(--secondary-for-rgba), 0.7);
 }
 
 /* *            T A S T E             */
