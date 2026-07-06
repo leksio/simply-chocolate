@@ -94,7 +94,6 @@ img {
 }
 
 /* *          H E A D E R            */
-
 .header {
   /* padding-top: 24px;
   padding-bottom: 24px; */
@@ -168,13 +167,12 @@ img {
 .header-menu-link:focus::after {
   transform: scaleX(1);
 } */
-
 .header-social {
   display: flex;
   gap: 18px;
 }
-/* *            H E R O               */
 
+/* *            H E R O               */
 .hero {
   color: var(--secondary);
   padding-bottom: 72px;
@@ -222,7 +220,6 @@ img {
 }
 
 /* *       A D V A N T A G E S        */
-
 .advantages {
   color: var(--secondary);
   background-color: var(--violet);
@@ -251,7 +248,6 @@ img {
 }
 
 /* *            T A S T E             */
-
 .taste {
   padding-top: 100px;
 }
@@ -293,29 +289,43 @@ img {
 }
 
 /* *            M A D E              */
-
 .made {
   padding-top: 100px;
 }
 .made-title {
+  margin-bottom: 50px;
 }
-
+.made-container {
+  display: flex;
+  justify-content: space-between;
+  /* "space-between" only works when all elements have a specified width */
+}
+.made-text-container {
+  background-color: var(--secondary);
+  width: 516px;
+  border-radius: 15px;
+  padding: 32px 59px 32px 32px;
+}
 .made-text {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.33;
+  max-width: 350px;
+  margin-bottom: 28px;
 }
 .made-list {
+  padding-left: 8px;
 }
-.made-item {
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
 }
 .made-item-text {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
 }
-/* *            L O V E D             */
 
+/* *            L O V E D             */
 .loved {
   padding-top: 100px;
 }
@@ -342,8 +352,7 @@ img {
   font-weight: 600;
 }
 
-/* *            F O O T E R             */
-
+/* *           F O O T E R            */
 .footer {
   color: var(--secondary);
   background-color: var(--violet);
