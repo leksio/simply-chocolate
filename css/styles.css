@@ -91,6 +91,36 @@ img {
 .section-title span {
   color: var(--accent);
 }
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 24px 2px;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 3px;
+  right: 4px;
+  bottom: 22px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-link:is(:hover, :focus) {
+  color: var(--accent);
+}
+.nav-link:is(:hover, :focus)::after {
+  transform: scaleX(1);
+}
 
 /* *          H E A D E R            */
 .header {
@@ -124,51 +154,6 @@ img {
 .header-logo-link span {
   font-style: italic;
 }
-.header-nav-list,
-.footer-nav-list {
-  display: flex;
-  gap: 20px;
-}
-.header-nav-link,
-.footer-nav-link {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: -0.02em;
-  position: relative;
-  transition: color 0.3s ease;
-  padding: 24px 2px;
-}
-.header-nav-link::after,
-.footer-nav-link::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  left: 3px;
-  right: 4px;
-  bottom: 22px;
-  background-color: currentColor;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-.header-nav-link:is(:hover, :focus),
-.footer-nav-link:is(:hover, :focus) {
-  color: var(--accent);
-}
-/* The same result as from the top entry:
-.header-nav-link:hover,
-.header-nav-link:focus {
-  color: --orange;
-} */
-.header-nav-link:is(:hover, :focus)::after,
-.footer-nav-link:is(:hover, :focus)::after {
-  transform: scaleX(1);
-}
-/* The same result as from the top entry:
-.header-nav-link:hover::after,
-.header-nav-link:focus::after {
-  transform: scaleX(1);
-} */
 .header-social {
   display: flex;
   gap: 18px;
