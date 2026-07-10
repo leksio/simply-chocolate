@@ -104,8 +104,8 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.02em;
-  padding-top: 24px;
-  padding-bottom: 32px;
+  padding-top: 28px;
+  padding-bottom: 36px;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -116,7 +116,7 @@ img {
   height: 1px;
   left: 3px;
   right: 3px;
-  bottom: 29px;
+  bottom: 34px;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -145,18 +145,19 @@ img {
   align-items: center;
 }
 .header-logo-link {
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(var(--primary-for-rgba), 0.4);
   display: flex;
   gap: 4px;
   align-items: center;
   padding-top: 24px;
   padding-bottom: 32px;
 }
-.header-logo-link span {
+.header-logo-accent {
   font-style: italic;
 }
 .header-social {
@@ -297,21 +298,26 @@ img {
   justify-content: space-between;
   /* "space-between" only works when all elements have a specified width */
 }
+.made-img {
+  background-color: rgba(var(--primary-for-rgba), 0.4);
+  border-radius: 15px;
+}
 .made-text-container {
   background-color: var(--secondary);
-  width: 516px;
+  max-width: 516px;
   border-radius: 15px;
-  padding: 32px 59px 32px 32px;
+  padding: 32px;
 }
 .made-text {
-  font-size: 18px;
   font-weight: 600;
+  font-size: 18px;
   line-height: 1.33;
   max-width: 350px;
   margin-bottom: 28px;
 }
 .made-list {
-  padding-left: 8px;
+  width: 428px;
+  padding-left: 16px;
 }
 .made-item:not(:last-child) {
   margin-bottom: 24px;
