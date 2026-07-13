@@ -80,7 +80,7 @@ img {
   padding-left: 15px;
   /* border: 1px solid red; */
 }
-.section-padding {
+.section {
   padding-top: 120px;
 }
 .section-title {
@@ -264,7 +264,6 @@ img {
   border: 1px solid var(--accent);
   border-radius: 15px;
   padding: 28px 23px;
-  /* height: 270px; */
 }
 .taste-item:nth-child(odd) {
   color: var(--secondary);
@@ -328,6 +327,49 @@ img {
   letter-spacing: -0.02em;
 }
 
+/* *         P R O D U C T S          */
+.products {
+}
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 18px;
+  text-align: center;
+}
+.product-item {
+  width: calc((100% - 3 * 18px) / 4);
+  border: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border-radius: 15px;
+  padding: 32px 20px;
+  background-color: var(--secondary);
+}
+.product-img {
+  margin-bottom: 8px;
+}
+.product-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+.product-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: rgba(var(--primary-for-rgba), 0.7);
+  margin-bottom: 18px;
+}
+.product-btn {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 20px;
+  border: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border-radius: 100px;
+  background-color: var(--primary-background);
+}
 /* *            L O V E D             */
 .loved {
   padding-bottom: 100px;
