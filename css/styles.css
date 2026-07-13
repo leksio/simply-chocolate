@@ -1,12 +1,16 @@
 :root {
   --primary: #111111; /*17, 17, 17*/
-  --primary-background: #fafafa;
+  --page-background: #fafafa;
   --primary-for-rgba: 17, 17, 17;
   --secondary: #ffffff;
   --secondary-for-rgba: 255, 255, 255;
   --accent: #fd9222;
   --light-orange: #fcf1e0;
   --violet: #1e1823;
+
+  /* Transition */
+  --transition-time: 300ms;
+  --transition-function: ease;
 }
 /*/*,
 /  *::before,
@@ -18,7 +22,7 @@ html {
 }
 body {
   color: var(--primary);
-  background-color: var(--primary-background);
+  background-color: var(--page-background);
   font-family: "Montserrat", sans-serif;
   /*Don't add:
   line-height: 
@@ -107,7 +111,9 @@ img {
   padding-top: 28px;
   padding-bottom: 36px;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
 }
 .nav-link::after {
   background-color: currentColor;
@@ -351,8 +357,8 @@ img {
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: -0.02em;
-  margin-bottom: 2px;
   text-transform: uppercase;
+  margin-bottom: 2px;
 }
 .product-description {
   font-weight: 400;
@@ -368,8 +374,17 @@ img {
   padding: 8px 20px;
   border: 1px solid rgba(var(--primary-for-rgba), 0.1);
   border-radius: 100px;
-  background-color: var(--primary-background);
+  background-color: var(--page-background);
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
 }
+.product-btn:is(:hover, :focus) {
+  color: var(--secondary);
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
+
 /* *            L O V E D             */
 .loved {
   padding-bottom: 100px;
