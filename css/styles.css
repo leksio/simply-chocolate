@@ -85,7 +85,7 @@ img {
   /* border: 1px solid red; */
 }
 .section {
-  padding-top: 120px;
+  padding-top: 110px;
 }
 .section-title {
   font-size: 24px;
@@ -98,6 +98,13 @@ img {
 }
 .section-title span {
   color: var(--accent);
+}
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 .nav-list {
   display: flex;
@@ -352,12 +359,7 @@ img {
 .product-img {
   margin-bottom: 8px;
 }
-.product-title {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.33;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+.product-name {
   margin-bottom: 2px;
 }
 .product-description {
@@ -385,9 +387,35 @@ img {
   background-color: var(--accent);
 }
 
-/* *            L O V E D             */
+/* *            sellers             */
+.sellers-list {
+  display: flex;
+  gap: 16px;
+}
+.sellers-item {
+  width: calc((100% - 2 * 16px) / 3);
+}
+.sellers-item-container {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+}
+.sellers-description {
+}
+.sellers-item-name {
+  border-right: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border-bottom: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border-left: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+
+/* *            loved             */
 .loved {
-  padding-bottom: 100px;
+  padding-bottom: 110px;
   text-align: center;
 }
 .loved-list {
