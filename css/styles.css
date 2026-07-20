@@ -295,10 +295,12 @@ button {
 .taste-title {
   margin-bottom: 28px;
 }
-.taste-main-text {
+.taste-text {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+}
+.taste-main-text {
   text-align: center;
   max-width: 486px;
   margin: 0 auto 50px;
@@ -313,8 +315,10 @@ button {
   border: 1px solid var(--accent);
   border-radius: 15px;
   padding: 28px 23px;
+  position: relative;
+  overflow: hidden;
 }
-.taste-item:nth-child(odd) {
+.taste-item:nth-child(odd) h3 {
   color: var(--secondary);
 }
 .taste-item:nth-child(4n + 1) {
@@ -336,6 +340,22 @@ button {
   line-height: 1.29;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+}
+.taste-cover-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 15px;
+  padding: 20px 15px;
+  background-color: var(--secondary);
+  transform: translateY(100%);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+.taste-item:hover .taste-cover-container {
+  transform: translateY(0);
+}
+.taste-cover-text {
 }
 
 /**            made              */
@@ -528,7 +548,6 @@ button {
   line-height: 1.29;
   letter-spacing: -0.02em;
 }
-.footer-nav {
-}
-.footer-nav-item {
+.footer-nav .nav-link {
+  padding-top: 18px;
 }
