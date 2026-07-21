@@ -9,7 +9,7 @@
   --violet: #1e1823;
 
   /* Transition */
-  --transition-duration: 250ms;
+  --transition-duration: 270ms;
   --transition-timing-function: ease;
 
   /* Background Images */
@@ -336,12 +336,20 @@ button {
 }
 .taste-item-name {
   font-weight: 600;
-  font-size: 14px;
   line-height: 1.29;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
 }
+.taste-item-name.main {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+.taste-item-name.cover {
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
 .taste-cover-container {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
@@ -349,13 +357,31 @@ button {
   border-radius: 15px;
   padding: 20px 15px;
   background-color: var(--secondary);
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 .taste-item:hover .taste-cover-container {
   transform: translateY(0);
 }
+.taste-buttnos-container {
+  display: flex;
+  gap: 6px;
+  padding-top: 8px;
+  padding-bottom: 14px;
+}
+.taste-btn {
+  font-size: 10px;
+  line-height: 1.2;
+  border: 1px solid var(--accent);
+  border-radius: 35px;
+  padding: 6px 16px;
+}
+.taste-btn.product {
+  color: var(--secondary);
+  background-color: var(--accent);
+}
 .taste-cover-text {
+  overflow-y: auto;
 }
 
 /**            made              */
