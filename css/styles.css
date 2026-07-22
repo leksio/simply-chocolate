@@ -13,7 +13,7 @@
   --transition-timing-function: ease;
 
   /* Background Images */
-  --hero-bg-1x: url(../images/hero/hero-bg-1x.jpg);
+  --hero-bg: url(../images/hero/hero-bg.jpg);
 }
 /*
 /  *,
@@ -196,7 +196,7 @@ button {
   padding: 381px 40px 40px;
   background-color: rgba(var(--primary-for-rgba), 0.6);
   background-image:
-    linear-gradient(180deg, rgba(var(--primary-for-rgba), 0), rgba(var(--primary-for-rgba), 0.4)), var(--hero-bg-1x);
+    linear-gradient(180deg, rgba(var(--primary-for-rgba), 0), rgba(var(--primary-for-rgba), 0.4)), var(--hero-bg);
   border-radius: 30px;
 }
 .hero h1 {
@@ -318,7 +318,13 @@ button {
   position: relative;
   overflow: hidden;
 }
-.taste-item:nth-child(odd) h3 {
+.taste-icon-container {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.taste-item:nth-child(odd) h3,
+.taste-item:nth-child(odd) .taste-icon {
   color: var(--secondary);
 }
 .taste-item:nth-child(4n + 1) {
@@ -330,6 +336,9 @@ button {
 }
 .taste-item:nth-child(even) {
   background-color: var(--secondary);
+}
+.taste-item:nth-child(even) .taste-icon {
+  color: var(--accent);
 }
 .taste-img {
   margin-bottom: 36px;
@@ -372,9 +381,9 @@ button {
 .taste-btn {
   font-size: 10px;
   line-height: 1.2;
+  padding: 6px 16px;
   border: 1px solid var(--accent);
   border-radius: 35px;
-  padding: 6px 16px;
 }
 .taste-btn.product {
   color: var(--secondary);
