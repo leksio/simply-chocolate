@@ -314,11 +314,11 @@ button {
   width: calc((100% - 3 * 32px) / 4);
   border: 1px solid var(--accent);
   border-radius: 15px;
-  padding: 28px 23px;
+  padding: 29px 23px;
   position: relative;
   overflow: hidden;
 }
-.taste-icon-container {
+.taste-icon {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -341,6 +341,7 @@ button {
   color: var(--accent);
 }
 .taste-img {
+  height: 160px;
   margin-bottom: 36px;
 }
 .taste-item-name {
@@ -376,7 +377,7 @@ button {
   display: flex;
   gap: 6px;
   padding-top: 8px;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
 }
 .taste-btn {
   font-size: 10px;
@@ -418,7 +419,21 @@ button {
 }
 .made-list {
   width: 428px;
+}
+.made-item {
+  position: relative;
   padding-left: 16px;
+}
+.made-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
+  border-radius: 50%;
 }
 .made-item:not(:last-child) {
   margin-bottom: 24px;
