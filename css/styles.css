@@ -1,16 +1,16 @@
 :root {
   --primary: #111111; /*17, 17, 17*/
   --page-background: #fafafa;
-  --primary-for-rgba: 17, 17, 17;
+  --primary-rgba: 17, 17, 17;
   --secondary: #ffffff;
-  --secondary-for-rgba: 255, 255, 255;
+  --secondary-rgba: 255, 255, 255;
   --accent: #fd9222;
   --light-orange: #fcf1e0;
   --violet: #1e1823;
 
   /* Transition */
-  --transition-duration: 275ms;
-  --transition-timing-function: ease;
+  --duration: 275ms;
+  --timing-function: ease-in-out;
 
   /* Background Images */
   --hero-bg: url(../images/hero/hero-bg.jpg);
@@ -113,18 +113,21 @@ button {
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
+.description-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
 .nav-list {
   display: flex;
-  gap: 24px;
 }
 .nav-link {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  padding-top: 28px;
-  padding-bottom: 36px;
-  transition: color var(--transition-duration) var(--transition-timing-function);
+  padding: 28px 12px 36px;
+  transition: color var(--duration) var(--timing-function);
   position: relative;
 }
 .nav-link::after {
@@ -132,11 +135,11 @@ button {
   content: "";
   position: absolute;
   height: 1px;
-  left: 3px;
-  right: 3px;
+  left: 15px;
+  right: 15px;
   bottom: 34px;
   transform: scaleX(0);
-  transition: transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--duration) var(--timing-function);
 }
 .nav-link:is(:hover, :focus) {
   color: var(--accent);
@@ -149,7 +152,7 @@ button {
 .header-container {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 71px;
 }
 .header-nav {
   flex-grow: 1;
@@ -175,16 +178,19 @@ button {
 }
 .socials-list {
   display: flex;
-  gap: 14px;
 }
 .social-link {
   padding-top: 24px;
   padding-bottom: 32px;
+  padding-left: 7px;
+}
+.social-item:not(:last-child) .social-link {
+  padding-right: 7px;
 }
 .social-icon {
   transition:
-    color var(--transition-duration) var(--transition-timing-function),
-    transform var(--transition-duration) var(--transition-timing-function);
+    color var(--duration) var(--timing-function),
+    transform var(--duration) var(--timing-function);
 }
 .social-link:is(:hover, :focus) .social-icon {
   /*These icons are drawn with lines, not solid shapes. so a:color not svg:fill*/
@@ -199,9 +205,9 @@ button {
 }
 .hero-container {
   padding: 381px 40px 40px;
-  background-color: rgba(var(--primary-for-rgba), 0.6);
+  background-color: rgba(var(--primary-rgba), 0.6);
   background-image:
-    linear-gradient(180deg, rgba(var(--primary-for-rgba), 0), rgba(var(--primary-for-rgba), 0.4)), var(--hero-bg);
+    linear-gradient(180deg, rgba(var(--primary-rgba), 0), rgba(var(--primary-rgba), 0.4)), var(--hero-bg);
   border-radius: 30px;
 }
 .hero h1 {
@@ -269,13 +275,13 @@ button {
   transform: translateY(-50%);
   height: 124px;
   width: 1px;
-  background-color: rgba(var(--secondary-for-rgba), 0.5);
+  background-color: rgba(var(--secondary-rgba), 0.5);
 }
 .advantages-icon-container {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  border: 1px solid rgba(var(--secondary-for-rgba), 0.5);
+  border: 1px solid rgba(var(--secondary-rgba), 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,7 +297,7 @@ button {
 .advantages-item-text {
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: rgba(var(--secondary-for-rgba), 0.7);
+  color: rgba(var(--secondary-rgba), 0.7);
 }
 
 /**            taste            */
@@ -299,11 +305,6 @@ button {
 }
 .taste-title {
   margin-bottom: 28px;
-}
-.taste-text {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
 }
 .taste-main-text {
   text-align: center;
@@ -372,7 +373,7 @@ button {
   padding: 20px 15px;
   background-color: var(--secondary);
   transform: translateY(101%);
-  transition: transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--duration) var(--timing-function);
   display: flex;
   flex-direction: column;
 }
@@ -407,7 +408,7 @@ button {
   /* "space-between" only works when all elements have a specified width */
 }
 .made-img {
-  background-color: rgba(var(--primary-for-rgba), 0.4);
+  background-color: rgba(var(--primary-rgba), 0.4);
   border-radius: 15px;
 }
 .made-text-container {
@@ -461,7 +462,7 @@ button {
 }
 .product-item {
   width: calc((100% - 3 * 18px) / 4);
-  border: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border: 1px solid rgba(var(--primary-rgba), 0.1);
   border-radius: 15px;
   padding: 32px 20px;
   background-color: var(--secondary);
@@ -477,19 +478,19 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.02em;
-  color: rgba(var(--primary-for-rgba), 0.7);
+  color: rgba(var(--primary-rgba), 0.7);
   margin-bottom: 18px;
 }
 .product-btn {
   font-weight: 600;
   font-size: 14px;
   padding: 8px 20px;
-  border: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border: 1px solid rgba(var(--primary-rgba), 0.1);
   border-radius: 100px;
   background-color: var(--page-background);
   transition-property: color, background-color, border-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 .product-btn:is(:hover, :focus) {
   color: var(--secondary);
@@ -509,13 +510,26 @@ button {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   overflow: hidden;
+  position: relative;
 }
-.sellers-description {
+.sellers-description-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  color: var(--secondary);
+  padding: 178px 40px 40px;
+  overflow-y: auto;
+  background-color: rgba(var(--primary-rgba), 0.2);
+  backdrop-filter: blur(7px);
+  transition: opacity var(--duration) var(--timing-function);
+  opacity: 0;
+}
+.sellers-description-overlay:is(:hover, :focus) {
+  opacity: 1;
 }
 .sellers-item-name {
-  border-right: 1px solid rgba(var(--primary-for-rgba), 0.1);
-  border-bottom: 1px solid rgba(var(--primary-for-rgba), 0.1);
-  border-left: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border-inline: 1px solid rgba(var(--primary-rgba), 0.1);
+  border-bottom: 1px solid rgba(var(--primary-rgba), 0.1);
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   padding-top: 28px;
@@ -539,7 +553,7 @@ button {
 .loved-item {
   width: calc((100% - 2 * 28px) / 3);
   padding: 56px 24px 24px;
-  border: 1px solid rgba(var(--primary-for-rgba), 0.1);
+  border: 1px solid rgba(var(--primary-rgba), 0.1);
   border-radius: 15px;
   background-color: var(--secondary);
   position: relative;
@@ -575,14 +589,12 @@ button {
   color: var(--secondary);
   background-color: var(--violet);
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 .footer-top-container {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(var(--secondary-for-rgba), 0.1);
+  border-bottom: 1px solid rgba(var(--secondary-rgba), 0.1);
   padding-bottom: 50px;
-  margin-bottom: 24px;
 }
 .footer-top-text {
   font-weight: 500;
@@ -615,6 +627,16 @@ button {
   line-height: 1.29;
   letter-spacing: -0.02em;
 }
-.footer-nav .nav-link {
-  padding-top: 18px;
+.footer-nav-item .nav-link {
+  padding-top: 42px;
+  padding-bottom: 68px;
+}
+.footer-nav-item:first-child .nav-link {
+  padding-left: 0px;
+}
+.footer-nav-item:first-child .nav-link::after {
+  left: 3px;
+}
+.footer-nav-item .nav-link::after {
+  bottom: 66px;
 }
