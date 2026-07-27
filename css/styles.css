@@ -188,9 +188,9 @@ button {
   padding-right: 7px;
 }
 .social-icon {
-  transition:
-    color var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
+  transition-property: color, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
 .social-link:is(:hover, :focus) .social-icon {
   /*These icons are drawn with lines, not solid shapes. so a:color not svg:fill*/
@@ -208,6 +208,9 @@ button {
   background-color: rgba(var(--primary-rgba), 0.6);
   background-image:
     linear-gradient(180deg, rgba(var(--primary-rgba), 0), rgba(var(--primary-rgba), 0.4)), var(--hero-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 30px;
 }
 .hero h1 {
@@ -233,18 +236,49 @@ button {
   border-color: var(--accent);
   background-color: var(--accent);
   margin-right: 14px;
+  transition-property: color, border-color, background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 }
-.hero-link-how {
-  border-style: solid;
+.hero-btn-buy:is(:hover, :focus) {
+  color: var(--accent);
   border-color: var(--secondary);
+  background-color: var(--secondary);
+}
+.hero-link-made {
+  border-style: solid;
+  border-color: currentColor;
+  transition: color var(--duration) var(--timing-function);
+}
+.hero-link-made:is(:hover, :focus) {
+  color: var(--accent);
 }
 .hero-link-down {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: -0.03em;
-  display: block;
   margin-left: auto;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  transition: color var(--duration) var(--timing-function);
+}
+.hero-link-down:is(:hover, :focus) {
+  color: var(--accent);
+}
+.down-icon-container {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.down-icon {
+  fill: var(--accent);
+  transition: fill var(--duration) var(--timing-function);
+}
+.hero-link-down:is(:hover, :focus) .down-icon {
+  fill: var(--secondary);
 }
 
 /**       advantages        */
@@ -582,6 +616,13 @@ button {
   padding: 14px 40px;
   border: 1px solid var(--accent);
   border-radius: 100px;
+  transition-property: color, background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+.loved-btn:is(:hover, :focus) {
+  color: var(--secondary);
+  background-color: var(--accent);
 }
 
 /**            footer            */
