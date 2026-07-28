@@ -92,7 +92,7 @@ button {
   padding-left: 15px;
 }
 .section {
-  padding-top: 110px;
+  padding-top: 120px;
 }
 .section-title {
   font-size: 24px;
@@ -321,8 +321,6 @@ button {
   align-items: center;
   margin-bottom: 22px;
 }
-.advantages-icon {
-}
 .advantages-subtitle {
   font-size: 18px;
   font-weight: 600;
@@ -335,8 +333,6 @@ button {
 }
 
 /**            taste            */
-.taste {
-}
 .taste-title {
   margin-bottom: 28px;
 }
@@ -486,8 +482,6 @@ button {
 }
 
 /**         products          */
-.products {
-}
 .products-list {
   display: flex;
   flex-wrap: wrap;
@@ -572,8 +566,8 @@ button {
 }
 
 /**            loved             */
-.loved {
-  padding-bottom: 110px;
+#loved {
+  padding-bottom: 120px;
   text-align: center;
 }
 .section-title.loved-title {
@@ -647,18 +641,29 @@ button {
 .footer-top-text span {
   color: var(--accent);
 }
-.footer-contacts-container {
+.footer-communication-container {
+  display: flex;
+  gap: 50px;
 }
-.footer-contacts-text {
+.footer-communication-text {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
-  margin-bottom: 14px;
 }
+.social-link.footer-paddings {
+  padding-top: 14px;
+  padding-bottom: 16px;
+}
+.footer-communication-container .social-item:first-child .social-link {
+  padding-left: 0px;
+}
+.footer-communication-container .social-item:last-child .social-link {
+  padding-right: 7px;
+}
+
 .footer-contacts {
+  margin-top: 14px;
   font-style: normal;
-}
-.footer-contacts-list {
 }
 .footer-contacts-item:not(:last-child) {
   margin-bottom: 4px;
