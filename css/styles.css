@@ -10,7 +10,6 @@
 
   /* Transition */
   --duration: 275ms;
-  --timing-function: ease-in-out;
 
   /* Background Images */
   --hero-bg: url(../images/hero/hero-bg.jpg);
@@ -127,7 +126,7 @@ button {
   line-height: 1.15;
   letter-spacing: -0.02em;
   padding: 28px 12px 36px;
-  transition: color var(--duration) var(--timing-function);
+  transition: color var(--duration);
   position: relative;
 }
 .nav-link::after {
@@ -139,7 +138,7 @@ button {
   right: 15px;
   bottom: 34px;
   transform: scaleX(0);
-  transition: transform var(--duration) var(--timing-function);
+  transition: transform var(--duration);
 }
 .nav-link:is(:hover, :focus) {
   color: var(--accent);
@@ -190,7 +189,6 @@ button {
 .social-icon {
   transition-property: color, transform;
   transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 .social-link:is(:hover, :focus) .social-icon {
   /*These icons are drawn with lines, not solid shapes. so a:color not svg:fill*/
@@ -238,7 +236,6 @@ button {
   margin-right: 14px;
   transition-property: color, border-color, background-color;
   transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 .hero-btn-buy:is(:hover, :focus) {
   color: var(--accent);
@@ -248,7 +245,7 @@ button {
 .hero-link-made {
   border-style: solid;
   border-color: currentColor;
-  transition: color var(--duration) var(--timing-function);
+  transition: color var(--duration);
 }
 .hero-link-made:is(:hover, :focus) {
   color: var(--accent);
@@ -263,7 +260,7 @@ button {
   gap: 14px;
   justify-content: center;
   align-items: center;
-  transition: color var(--duration) var(--timing-function);
+  transition: color var(--duration);
 }
 .hero-link-down:is(:hover, :focus) {
   color: var(--accent);
@@ -275,7 +272,7 @@ button {
 }
 .down-icon {
   fill: var(--accent);
-  transition: fill var(--duration) var(--timing-function);
+  transition: fill var(--duration);
 }
 .hero-link-down:is(:hover, :focus) .down-icon {
   fill: var(--secondary);
@@ -403,7 +400,7 @@ button {
   padding: 20px 15px;
   background-color: var(--secondary);
   transform: translateY(101%);
-  transition: transform var(--duration) var(--timing-function);
+  transition: transform var(--duration);
   display: flex;
   flex-direction: column;
 }
@@ -518,7 +515,6 @@ button {
   background-color: var(--page-background);
   transition-property: color, background-color, border-color;
   transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 .product-btn:is(:hover, :focus) {
   color: var(--secondary);
@@ -549,7 +545,7 @@ button {
   overflow-y: auto;
   background-color: rgba(var(--primary-rgba), 0.2);
   backdrop-filter: blur(7px);
-  transition: opacity var(--duration) var(--timing-function);
+  transition: opacity var(--duration);
   opacity: 0;
 }
 .sellers-description-overlay:is(:hover, :focus) {
@@ -612,7 +608,6 @@ button {
   border-radius: 100px;
   transition-property: color, background-color;
   transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
 }
 .loved-btn:is(:hover, :focus) {
   color: var(--secondary);
