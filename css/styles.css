@@ -645,12 +645,12 @@ button {
   font-size: 14px;
   line-height: 1.29;
 }
+.footer-communication-text.padding {
+  padding-left: 7px;
+}
 .social-link.footer-paddings {
   padding-top: 14px;
   padding-bottom: 16px;
-}
-.footer-communication-container .social-item:first-child .social-link {
-  padding-left: 0px;
 }
 .footer-communication-container .social-item:last-child .social-link {
   padding-right: 7px;
