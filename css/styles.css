@@ -689,22 +689,36 @@ button {
   height: 100%;
   top: 0;
   background-color: rgba(var(--primary-rgba), 0.4);
-  /* 1) To center a child:
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center; */
+  /* display: grid;
+  place-content: center; */
   display: flex;
 }
 .modal {
+  position: relative;
   width: 517px;
   /* don't use just height */
   min-height: 757px; /* min-height: 794px; */
   background-color: var(--page-background);
   border-radius: 15px;
-  /* 2) To center an element:
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%; */
   margin: auto;
+  overflow: hidden;
+}
+.modal-close-btn {
+  border: none;
+  background-color: transparent;
+  border-bottom-left-radius: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 24px 24px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
