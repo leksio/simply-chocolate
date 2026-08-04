@@ -561,7 +561,7 @@
               </p>
             </li>
           </ul>
-          <button type="button" class="loved-btn">Leave a review</button>
+          <button type="button" class="loved-btn" data-modal-open>Leave a review</button>
         </div>
       </section>
     </main>
@@ -637,14 +637,15 @@
         </nav>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn">
+        <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="28" height="28">
             <use href="./images/icons.svg#x-close"></use>
           </svg>
         </button>
       </div>
     </div>
+    <script src="./js/modal.js" type="module"></script>
   </body>
 </html>
