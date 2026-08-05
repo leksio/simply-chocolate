@@ -637,13 +637,20 @@
         </nav>
       </div>
     </footer>
-    <div class="modal-backdrop is-hidden" data-modal>
+    <div class="modal-backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="28" height="28">
             <use href="./images/icons.svg#x-close"></use>
           </svg>
         </button>
+        <p class="section-title modal-title">leave a review about <span>our chocolate</span></p>
+        <form>
+          <input class="modal-input" type="text" placeholder="Your name" />
+          <input class="modal-input" type="text" placeholder="Your email" />
+          <input class="modal-input" type="text" placeholder="Your review" />
+          <button type="submit">send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js" type="module"></script>

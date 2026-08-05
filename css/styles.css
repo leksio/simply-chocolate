@@ -722,6 +722,7 @@ button {
   translate: -50% -50%; */
   margin: auto;
   overflow: hidden;
+  padding: 40px;
 }
 .modal-close-btn {
   border: none;
@@ -734,4 +735,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.section-title.modal-title {
+  max-width: 300px;
+  text-align: left;
+  margin-bottom: 42px;
+}
+.moddal-input {
 }
