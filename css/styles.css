@@ -741,6 +741,13 @@ button {
   text-align: left;
   margin-bottom: 42px;
 }
+.modal-label {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #4040404d;
+  margin-bottom: 8px;
+}
 .modal-input {
   width: 100%;
   height: 68px;
@@ -751,12 +758,11 @@ button {
   outline: transparent;
   transition-property: border-color;
   transition-duration: var(--duration);
+  margin-bottom: 18px;
 }
-
 .modal-input:is(:hover, :focus) {
   border-color: var(--accent);
 }
-
 .modal-input::placeholder {
   color: #4040404d;
   font-size: 18px;
@@ -768,7 +774,7 @@ button {
 /* .modal-input:required {
   border-color: blue;
 }
-.modal-submit:disabled {
+.modal-form-submit:disabled {
   opacity: 0.5;
   pointer-events: none;
 } */
