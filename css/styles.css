@@ -751,12 +751,20 @@ button {
   text-align: left;
   margin-bottom: 42px;
 }
+.modal-input-label-container {
+  margin-bottom: 18px;
+}
 .modal-label {
   display: inline-block;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #4040404d;
   margin-bottom: 8px;
+}
+.modal-input-wrapper {
+  display: inline-block;
+  width: 100%;
+  position: relative;
 }
 .modal-input {
   width: 100%;
@@ -768,7 +776,6 @@ button {
   outline: transparent;
   transition-property: border-color;
   transition-duration: var(--duration);
-  margin-bottom: 18px;
 }
 .modal-input:is(:hover, :focus) {
   border-color: var(--accent);
@@ -780,6 +787,12 @@ button {
 }
 .modal-input:is(:focus)::placeholder {
   opacity: 0;
+}
+.modal-input-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  translate: 0 -50%;
 }
 /* .modal-input:required {
   border-color: blue;
