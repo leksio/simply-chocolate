@@ -4,6 +4,7 @@
   --primary-rgba: 17, 17, 17;
   --secondary: #ffffff;
   --secondary-rgba: 255, 255, 255;
+  --gray-rgba: 64, 64, 64;
   --accent: #fd9222;
   --light-orange: #fcf1e0;
   --violet: #1e1823;
@@ -781,7 +782,7 @@ button {
   border-color: var(--accent);
 }
 .modal-input::placeholder {
-  color: #4040404d;
+  color: rgba(var(--gray-rgba), 0.3);
   font-size: 18px;
   letter-spacing: -0.02em;
 }
@@ -793,6 +794,12 @@ button {
   left: 24px;
   top: 50%;
   translate: 0 -50%;
+  color: rgb(var(--gray-rgba));
+  transition-property: color;
+  transition-duration: var(--duration);
+}
+.modal-input:focus + .modal-input-icon {
+  color: var(--accent);
 }
 /* .modal-input:required {
   border-color: blue;
