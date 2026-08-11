@@ -753,6 +753,8 @@ button {
   margin-bottom: 42px;
 }
 .modal-input-label-container {
+  display: block;
+  width: 100%;
   margin-bottom: 18px;
 }
 .modal-label {
