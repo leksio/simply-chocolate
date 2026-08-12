@@ -765,7 +765,7 @@ button {
   margin-bottom: 8px;
 }
 .modal-input-wrapper {
-  display: inline-block;
+  display: block;
   width: 100%;
   position: relative;
 }
@@ -792,16 +792,19 @@ button {
   opacity: 0;
 }
 .modal-input-icon {
+  stroke: var(--primary);
+  fill: transparent;
   position: absolute;
   left: 24px;
   top: 50%;
-  translate: 0 -50%;
+  transform: translateY(-50%);
   color: rgb(var(--gray-rgba));
-  transition-property: color;
+  transition-property: color, stroke;
   transition-duration: var(--duration);
 }
 .modal-input:focus + .modal-input-icon {
   color: var(--accent);
+  stroke: var(--accent);
 }
 /* .modal-input:required {
   border-color: blue;
