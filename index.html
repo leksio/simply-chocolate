@@ -746,7 +746,7 @@
         </nav>
       </div>
     </footer>
-    <div class="modal-backdrop" data-modal>
+    <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="28" height="28">
@@ -821,6 +821,14 @@
               </svg>
             </span>
           </label>
+          <div class="modal-textarea-container">
+            <label for="modal-textarea-id" class="modal-label">Comment</label>
+            <textarea
+              id="modal-textarea-id"
+              name="user-comment"
+              class="modal-input modal-textarea"
+              placeholder="Enter text"></textarea>
+          </div>
           <button class="modal-form-submit" type="submit">send</button>
         </form>
       </div>
