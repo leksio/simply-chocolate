@@ -1,13 +1,13 @@
 :root {
-  --primary: #111111; /*17, 17, 17*/
-  --page-background: #fafafa;
-  --primary-rgba: 17, 17, 17;
-  --secondary: #ffffff;
-  --secondary-rgba: 255, 255, 255;
-  --gray-rgba: 64, 64, 64;
-  --accent: #fd9222;
-  --light-orange: #fcf1e0;
+  --primary: 17, 17, 17; /*#111111*/
+  --secondary: 255, 255, 255; /*#ffffff*/
+  --page-background: 250, 250, 250; /*#fafafa*/
+  --gray: 64, 64, 64; /*#404040*/
+
   --violet: #1e1823;
+  --accent: #fd9222;
+  --accent-red: #e74a3b;
+  --light-orange: #fcf1e0;
 
   /* Transition */
   --duration: 275ms;
@@ -25,8 +25,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: var(--primary);
-  background-color: var(--page-background);
+  color: rgb(var(--primary));
+  background-color: rgb(var(--page-background));
   font-family: "Montserrat", sans-serif;
   /*Don't add:
   line-height: 
@@ -207,18 +207,14 @@ button {
 
 /**            hero               */
 .hero {
-  color: var(--secondary);
+  color: rgb(var(--secondary));
   padding-bottom: 80px;
 }
 .hero-container {
   padding: 381px 40px 40px;
-  background-color: rgba(var(--primary-rgba), 0.6);
+  background-color: rgba(var(--primary), 0.6);
   background-image:
-    linear-gradient(
-      180deg,
-      rgba(var(--primary-rgba), 0),
-      rgba(var(--primary-rgba), 0.4)
-    ),
+    linear-gradient(180deg, rgba(var(--primary), 0), rgba(var(--primary), 0.4)),
     var(--hero-bg);
   background-repeat: no-repeat;
   background-position: center;
@@ -253,8 +249,8 @@ button {
 }
 .hero-btn-buy:is(:hover, :focus) {
   color: var(--accent);
-  border-color: var(--secondary);
-  background-color: var(--secondary);
+  border-color: rgb(var(--secondary));
+  background-color: rgb(var(--secondary));
 }
 .hero-link-made {
   border-style: solid;
@@ -289,12 +285,12 @@ button {
   transition: fill var(--duration);
 }
 .hero-link-down:is(:hover, :focus) .down-icon {
-  fill: var(--secondary);
+  fill: rgb(var(--secondary));
 }
 
 /**       advantages        */
 .advantages {
-  color: var(--secondary);
+  color: rgb(var(--secondary));
   background-color: var(--violet);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -320,13 +316,13 @@ button {
   transform: translateY(-50%);
   height: 124px;
   width: 1px;
-  background-color: rgba(var(--secondary-rgba), 0.5);
+  background-color: rgba(var(--secondary), 0.5);
 }
 .advantages-icon-container {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  border: 1px solid rgba(var(--secondary-rgba), 0.5);
+  border: 1px solid rgba(var(--secondary), 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,7 +336,7 @@ button {
 .advantages-item-text {
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: rgba(var(--secondary-rgba), 0.7);
+  color: rgba(var(--secondary), 0.7);
 }
 
 /**            taste            */
@@ -372,7 +368,7 @@ button {
 }
 .taste-item:nth-child(odd) h3,
 .taste-item:nth-child(odd) .taste-icon {
-  color: var(--secondary);
+  color: rgb(var(--secondary));
 }
 .taste-item:nth-child(4n + 1) {
   background-color: var(--accent);
@@ -382,7 +378,7 @@ button {
   background-color: var(--violet);
 }
 .taste-item:nth-child(even) {
-  background-color: var(--secondary);
+  background-color: rgb(var(--secondary));
 }
 .taste-item:nth-child(even) .taste-icon {
   color: var(--accent);
@@ -412,7 +408,7 @@ button {
   height: 100%;
   border-radius: 15px;
   padding: 20px 15px;
-  background-color: var(--secondary);
+  background-color: rgb(var(--secondary));
   transform: translateY(101%);
   transition: transform var(--duration);
   display: flex;
@@ -435,7 +431,7 @@ button {
   border-radius: 35px;
 }
 .taste-btn.product {
-  color: var(--secondary);
+  color: rgb(var(--secondary));
   background-color: var(--accent);
 }
 .taste-overlay-text {
@@ -449,11 +445,11 @@ button {
   /* "space-between" only works when all elements have a specified width */
 }
 .made-img {
-  background-color: rgba(var(--primary-rgba), 0.4);
+  background-color: rgba(var(--primary), 0.4);
   border-radius: 15px;
 }
 .made-text-container {
-  background-color: var(--secondary);
+  background-color: rgb(var(--secondary));
   max-width: 516px;
   border-radius: 15px;
   padding: 32px;
@@ -501,10 +497,10 @@ button {
 }
 .product-item {
   width: calc((100% - 3 * 18px) / 4);
-  border: 1px solid rgba(var(--primary-rgba), 0.1);
+  border: 1px solid rgba(var(--primary), 0.1);
   border-radius: 15px;
   padding: 32px 20px;
-  background-color: var(--secondary);
+  background-color: rgb(var(--secondary));
 }
 .product-img {
   margin-bottom: 8px;
@@ -517,21 +513,21 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.02em;
-  color: rgba(var(--primary-rgba), 0.7);
+  color: rgba(var(--primary), 0.7);
   margin-bottom: 18px;
 }
 .product-btn {
   font-weight: 600;
   font-size: 14px;
   padding: 8px 20px;
-  border: 1px solid rgba(var(--primary-rgba), 0.1);
+  border: 1px solid rgba(var(--primary), 0.1);
   border-radius: 100px;
-  background-color: var(--page-background);
+  background-color: rgb(var(--page-background));
   transition-property: color, background-color, border-color;
   transition-duration: var(--duration);
 }
 .product-btn:is(:hover, :focus) {
-  color: var(--secondary);
+  color: rgb(var(--secondary));
   border-color: var(--accent);
   background-color: var(--accent);
 }
@@ -554,10 +550,10 @@ button {
   position: absolute;
   top: 0;
   height: 100%;
-  color: var(--secondary);
+  color: rgb(var(--secondary));
   padding: 178px 40px 40px;
   overflow-y: auto;
-  background-color: rgba(var(--primary-rgba), 0.2);
+  background-color: rgba(var(--primary), 0.2);
   backdrop-filter: blur(7px);
   transition: opacity var(--duration);
   opacity: 0;
@@ -566,8 +562,8 @@ button {
   opacity: 1;
 }
 .sellers-item-name {
-  border-inline: 1px solid rgba(var(--primary-rgba), 0.1);
-  border-bottom: 1px solid rgba(var(--primary-rgba), 0.1);
+  border-inline: 1px solid rgba(var(--primary), 0.1);
+  border-bottom: 1px solid rgba(var(--primary), 0.1);
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   padding-top: 28px;
@@ -591,9 +587,9 @@ button {
 .loved-item {
   width: calc((100% - 2 * 28px) / 3);
   padding: 56px 24px 24px;
-  border: 1px solid rgba(var(--primary-rgba), 0.1);
+  border: 1px solid rgba(var(--primary), 0.1);
   border-radius: 15px;
-  background-color: var(--secondary);
+  background-color: rgb(var(--secondary));
   position: relative;
 }
 .loved-img {
@@ -624,20 +620,20 @@ button {
   transition-duration: var(--duration);
 }
 .loved-btn:is(:hover, :focus) {
-  color: var(--secondary);
+  color: rgb(var(--secondary));
   background-color: var(--accent);
 }
 
 /**            footer            */
 .footer {
-  color: var(--secondary);
+  color: rgb(var(--secondary));
   background-color: var(--violet);
   padding-top: 50px;
 }
 .footer-top-container {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(var(--secondary-rgba), 0.1);
+  border-bottom: 1px solid rgba(var(--secondary), 0.1);
   padding-bottom: 50px;
 }
 .footer-top-text {
@@ -702,7 +698,7 @@ button {
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(var(--primary-rgba), 0.4);
+  background-color: rgba(var(--primary), 0.4);
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -720,7 +716,7 @@ button {
   width: 517px;
   /* don't use just height */
   min-height: 757px; /* min-height: 794px; */
-  background-color: var(--page-background);
+  background-color: rgb(var(--page-background));
   border-radius: 15px;
   /* position: absolute;
   top: 50%;
@@ -761,7 +757,7 @@ button {
   display: inline-block;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: rgba(var(--gray-rgba), 0.3);
+  color: rgba(var(--gray), 0.3);
   margin-bottom: 8px;
 }
 .modal-input-wrapper {
@@ -772,7 +768,7 @@ button {
   width: 100%;
   height: 68px;
   border-radius: 13px;
-  border: 1.5px solid rgba(var(--primary-rgba), 0.05);
+  border: 1.5px solid rgba(var(--primary), 0.05);
   background-color: transparent;
   padding: 0px 15px 0px 62px;
   outline: transparent;
@@ -783,7 +779,7 @@ button {
   border-color: var(--accent);
 }
 .modal-input::placeholder {
-  color: rgba(var(--gray-rgba), 0.3);
+  color: rgba(var(--gray), 0.3);
   font-size: 18px;
   letter-spacing: -0.02em;
 }
@@ -797,8 +793,8 @@ button {
   transform: translateY(-50%);
   /* Required for correct rendering of defective icons (Handling 'fill' alone is insufficient) */
   fill: transparent;
-  color: rgb(var(--gray-rgba));
-  stroke: rgb(var(--gray-rgba));
+  color: rgb(var(--gray));
+  stroke: rgb(var(--gray));
   transition-property: color, stroke;
   transition-duration: var(--duration);
 }
@@ -813,6 +809,49 @@ button {
   height: 137px;
   padding: 22px 24px;
   resize: none;
+}
+.modal-terms-container {
+  margin-bottom: 40px;
+}
+.modal-terms-input:is(:focus) + .modal-terms-label span {
+  border-color: var(--accent);
+}
+.modal-terms-input:checked + .modal-terms-label span {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  fill: rgb(var(--secondary));
+}
+.modal-terms-label {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(var(--gray), 0.6);
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+.modal-terms-label span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(var(--primary), 0.14);
+  border-radius: 6px;
+  margin-right: 12px;
+  fill: transparent;
+  transition-property: all;
+  transition-duration: var(--duration);
+}
+.modal-terms-label:is(:hover) span {
+  border-color: var(--accent);
+}
+.modal-terms-label a {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: underline;
+}
+.modal-terms-label a:is(:hover, :focus) {
+  outline: var(--accent) dotted 1px;
 }
 /* .modal-input:required {
   border-color: blue;

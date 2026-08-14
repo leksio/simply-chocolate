@@ -829,6 +829,30 @@
               class="modal-input modal-textarea"
               placeholder="Enter text"></textarea>
           </div>
+          <div class="modal-terms-container">
+            <!-- This INPUT need to be hidden 
+             (add class="visually-hidden". Just attribute "hidden" is wrong method) -->
+            <input
+              class="modal-terms-input visually-hidden"
+              type="checkbox"
+              name="modal-terms"
+              id="modal-terms-id"
+              value="true" />
+            <label for="modal-terms-id" class="modal-terms-label">
+              <span>
+                <svg class="modal-terms-icon" width="10" height="10">
+                  <use href="./images/icons.svg#checked"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a
+                href="https://google.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                Privacy Policy
+              </a>
+            </label>
+          </div>
           <button class="modal-form-submit" type="submit">send</button>
         </form>
       </div>
