@@ -99,12 +99,8 @@
             our finest ingredients for a moment of pure delight!
           </h1>
           <div class="hero-buttons-container">
-            <button class="hero-buttons hero-btn-buy" type="button">
-              Buy now
-            </button>
-            <a class="hero-buttons hero-link-made" href="#made">
-              How it’s made
-            </a>
+            <button class="buttons hero-btn-buy" type="button">Buy now</button>
+            <a class="buttons hero-link-made" href="#made">How it’s made</a>
             <a class="hero-link-down" href="#products">
               scroll down
               <div class="down-icon-container">
@@ -648,7 +644,7 @@
               </p>
             </li>
           </ul>
-          <button type="button" class="loved-btn" data-modal-open>
+          <button type="button" class="buttons loved-btn" data-modal-open>
             Leave a review
           </button>
         </div>
@@ -822,9 +818,9 @@
             </span>
           </label>
           <div class="modal-textarea-container">
-            <label for="modal-textarea-id" class="modal-label">Comment</label>
+            <label for="modal-textarea" class="modal-label">Comment</label>
             <textarea
-              id="modal-textarea-id"
+              id="modal-textarea"
               name="user-comment"
               class="modal-input modal-textarea"
               placeholder="Enter text"></textarea>
@@ -833,27 +829,24 @@
             <!-- This INPUT need to be hidden 
              (add class="visually-hidden". Just attribute "hidden" is wrong method) -->
             <input
-              class="modal-terms-input visually-hidden"
+              class="modal-checkbox visually-hidden"
               type="checkbox"
-              name="modal-terms"
-              id="modal-terms-id"
-              value="true" />
-            <label for="modal-terms-id" class="modal-terms-label">
+              name="modal-checkbox"
+              id="terms"
+              required />
+            <label for="terms" class="modal-terms-label">
               <span>
                 <svg class="modal-terms-icon" width="10" height="10">
                   <use href="./images/icons.svg#checked"></use>
                 </svg>
               </span>
               I accept the terms and conditions of the
-              <a
-                href="https://google.com"
-                target="_blank"
-                rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
               </a>
             </label>
           </div>
-          <button class="modal-form-submit" type="submit">send</button>
+          <button class="buttons modal-submit" type="submit">Send</button>
         </form>
       </div>
     </div>

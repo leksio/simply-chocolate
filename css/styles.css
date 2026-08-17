@@ -6,11 +6,11 @@
 
   --violet: #1e1823;
   --accent: #fd9222;
+  --accent-light: #fcf1e0;
   --accent-red: #e74a3b;
-  --light-orange: #fcf1e0;
 
   /* Transition */
-  --duration: 275ms;
+  --duration: 290ms;
 
   /* Background Images */
   --hero-bg: url(../images/hero/hero-bg.jpg);
@@ -155,6 +155,16 @@ button {
 .nav-link:is(:hover, :focus)::after {
   transform: scaleX(1);
 }
+.buttons {
+  font-size: 14px;
+  font-weight: 600;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 100px;
+  padding: 14px 40px;
+  transition-property: all;
+  transition-duration: var(--duration);
+}
 
 /**          header            */
 .header-container {
@@ -233,29 +243,18 @@ button {
   display: flex;
   align-items: center;
 }
-.hero-buttons {
-  font-size: 14px;
-  font-weight: 600;
-  border-width: 1px;
-  border-radius: 100px;
-  padding: 14px 40px;
-}
 .hero-btn-buy {
   border-color: var(--accent);
   background-color: var(--accent);
   margin-right: 14px;
-  transition-property: color, border-color, background-color;
-  transition-duration: var(--duration);
 }
 .hero-btn-buy:is(:hover, :focus) {
   color: var(--accent);
-  border-color: rgb(var(--secondary));
-  background-color: rgb(var(--secondary));
+  border-color: var(--accent-light);
+  background-color: var(--accent-light);
 }
 .hero-link-made {
-  border-style: solid;
   border-color: currentColor;
-  transition: color var(--duration);
 }
 .hero-link-made:is(:hover, :focus) {
   color: var(--accent);
@@ -612,12 +611,7 @@ button {
 }
 .loved-btn {
   font-size: 18px;
-  font-weight: 600;
-  padding: 14px 40px;
-  border: 1px solid var(--accent);
-  border-radius: 100px;
-  transition-property: color, background-color;
-  transition-duration: var(--duration);
+  border-color: var(--accent);
 }
 .loved-btn:is(:hover, :focus) {
   color: rgb(var(--secondary));
@@ -712,11 +706,10 @@ button {
   transform: scaleY(0);
 }
 .modal {
+  background-color: rgb(var(--page-background));
   position: relative;
   width: 517px;
-  /* don't use just height */
-  min-height: 757px; /* min-height: 794px; */
-  background-color: rgb(var(--page-background));
+  min-height: 794px; /* don't use just height */
   border-radius: 15px;
   /* position: absolute;
   top: 50%;
@@ -750,11 +743,10 @@ button {
 }
 .modal-input-label-container {
   display: block;
-  width: 100%;
   margin-bottom: 18px;
 }
 .modal-label {
-  display: inline-block;
+  display: block;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: rgba(var(--gray), 0.3);
@@ -806,6 +798,7 @@ button {
   margin-bottom: 18px;
 }
 .modal-textarea {
+  display: block;
   height: 137px;
   padding: 22px 24px;
   resize: none;
@@ -813,10 +806,14 @@ button {
 .modal-terms-container {
   margin-bottom: 40px;
 }
-.modal-terms-input:is(:focus) + .modal-terms-label span {
+.modal-checkbox {
+  width: 20px;
+  height: 20px; /*for proper required message placement*/
+}
+.modal-checkbox:is(:focus) + .modal-terms-label span {
   border-color: var(--accent);
 }
-.modal-terms-input:checked + .modal-terms-label span {
+.modal-checkbox:checked + .modal-terms-label span {
   background-color: var(--accent);
   border-color: var(--accent);
   fill: rgb(var(--secondary));
@@ -852,6 +849,16 @@ button {
 }
 .modal-terms-label a:is(:hover, :focus) {
   outline: var(--accent) dotted 1px;
+}
+.modal-submit {
+  color: rgb(var(--secondary));
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
+.modal-submit:is(:hover, :focus) {
+  color: var(--accent);
+  border-color: currentColor;
+  background-color: var(--accent-light);
 }
 /* .modal-input:required {
   border-color: blue;
