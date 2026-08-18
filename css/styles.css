@@ -1,9 +1,9 @@
 :root {
-  --primary: 17, 17, 17; /*#111111*/
-  --secondary: 255, 255, 255; /*#ffffff*/
-  --page-background: 250, 250, 250; /*#fafafa*/
-  --gray: 64, 64, 64; /*#404040*/
-
+  --rgb-primary: 17, 17, 17; /*#111111*/
+  --rgb-secondary: 255, 255, 255; /*#ffffff*/
+  --rgb-gray: 64, 64, 64; /*#404040*/
+  
+  --page-background: #fafafa;
   --violet: #1e1823;
   --accent: #fd9222;
   --accent-light: #fcf1e0;
@@ -25,8 +25,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: rgb(var(--primary));
-  background-color: rgb(var(--page-background));
+  color: rgb(var(--rgb-primary));
+  background-color: var(--page-background);
   font-family: "Montserrat", sans-serif;
   /*Don't add:
   line-height: 
@@ -210,21 +210,20 @@ button {
   transition-duration: var(--duration);
 }
 .social-link:is(:hover, :focus) .social-icon {
-  /*These icons are drawn with lines, not solid shapes. so a:color not svg:fill*/
   color: var(--accent);
   transform: scale(1.15);
 }
 
 /**            hero               */
 .hero {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   padding-bottom: 80px;
 }
 .hero-container {
   padding: 381px 40px 40px;
-  background-color: rgba(var(--primary), 0.6);
+  background-color: rgba(var(--rgb-primary), 0.6);
   background-image:
-    linear-gradient(180deg, rgba(var(--primary), 0), rgba(var(--primary), 0.4)),
+    linear-gradient(180deg, rgba(var(--rgb-primary), 0), rgba(var(--rgb-primary), 0.4)),
     var(--hero-bg);
   background-repeat: no-repeat;
   background-position: center;
@@ -284,12 +283,12 @@ button {
   transition: fill var(--duration);
 }
 .hero-link-down:is(:hover, :focus) .down-icon {
-  fill: rgb(var(--secondary));
+  fill: rgb(var(--rgb-secondary));
 }
 
 /**       advantages        */
 .advantages {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   background-color: var(--violet);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -315,13 +314,13 @@ button {
   transform: translateY(-50%);
   height: 124px;
   width: 1px;
-  background-color: rgba(var(--secondary), 0.5);
+  background-color: rgba(var(--rgb-secondary), 0.5);
 }
 .advantages-icon-container {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  border: 1px solid rgba(var(--secondary), 0.5);
+  border: 1px solid rgba(var(--rgb-secondary), 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,7 +334,7 @@ button {
 .advantages-item-text {
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: rgba(var(--secondary), 0.7);
+  color: rgba(var(--rgb-secondary), 0.7);
 }
 
 /**            taste            */
@@ -367,7 +366,7 @@ button {
 }
 .taste-item:nth-child(odd) h3,
 .taste-item:nth-child(odd) .taste-icon {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
 }
 .taste-item:nth-child(4n + 1) {
   background-color: var(--accent);
@@ -377,7 +376,7 @@ button {
   background-color: var(--violet);
 }
 .taste-item:nth-child(even) {
-  background-color: rgb(var(--secondary));
+  background-color: rgb(var(--rgb-secondary));
 }
 .taste-item:nth-child(even) .taste-icon {
   color: var(--accent);
@@ -407,7 +406,7 @@ button {
   height: 100%;
   border-radius: 15px;
   padding: 20px 15px;
-  background-color: rgb(var(--secondary));
+  background-color: rgb(var(--rgb-secondary));
   transform: translateY(101%);
   transition: transform var(--duration);
   display: flex;
@@ -430,7 +429,7 @@ button {
   border-radius: 35px;
 }
 .taste-btn.product {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   background-color: var(--accent);
 }
 .taste-overlay-text {
@@ -444,11 +443,11 @@ button {
   /* "space-between" only works when all elements have a specified width */
 }
 .made-img {
-  background-color: rgba(var(--primary), 0.4);
+  background-color: rgba(var(--rgb-primary), 0.4);
   border-radius: 15px;
 }
 .made-text-container {
-  background-color: rgb(var(--secondary));
+  background-color: rgb(var(--rgb-secondary));
   max-width: 516px;
   border-radius: 15px;
   padding: 32px;
@@ -496,10 +495,10 @@ button {
 }
 .product-item {
   width: calc((100% - 3 * 18px) / 4);
-  border: 1px solid rgba(var(--primary), 0.1);
+  border: 1px solid rgba(var(--rgb-primary), 0.1);
   border-radius: 15px;
   padding: 32px 20px;
-  background-color: rgb(var(--secondary));
+  background-color: rgb(var(--rgb-secondary));
 }
 .product-img {
   margin-bottom: 8px;
@@ -512,21 +511,21 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.02em;
-  color: rgba(var(--primary), 0.7);
+  color: rgba(var(--rgb-primary), 0.7);
   margin-bottom: 18px;
 }
 .product-btn {
   font-weight: 600;
   font-size: 14px;
   padding: 8px 20px;
-  border: 1px solid rgba(var(--primary), 0.1);
+  border: 1px solid rgba(var(--rgb-primary), 0.1);
   border-radius: 100px;
-  background-color: rgb(var(--page-background));
+  background-color: var(--page-background);
   transition-property: color, background-color, border-color;
   transition-duration: var(--duration);
 }
 .product-btn:is(:hover, :focus) {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   border-color: var(--accent);
   background-color: var(--accent);
 }
@@ -549,10 +548,10 @@ button {
   position: absolute;
   top: 0;
   height: 100%;
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   padding: 178px 40px 40px;
   overflow-y: auto;
-  background-color: rgba(var(--primary), 0.2);
+  background-color: rgba(var(--rgb-primary), 0.2);
   backdrop-filter: blur(7px);
   transition: opacity var(--duration);
   opacity: 0;
@@ -561,8 +560,8 @@ button {
   opacity: 1;
 }
 .sellers-item-name {
-  border-inline: 1px solid rgba(var(--primary), 0.1);
-  border-bottom: 1px solid rgba(var(--primary), 0.1);
+  border-inline: 1px solid rgba(var(--rgb-primary), 0.1);
+  border-bottom: 1px solid rgba(var(--rgb-primary), 0.1);
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
   padding-top: 28px;
@@ -586,9 +585,9 @@ button {
 .loved-item {
   width: calc((100% - 2 * 28px) / 3);
   padding: 56px 24px 24px;
-  border: 1px solid rgba(var(--primary), 0.1);
+  border: 1px solid rgba(var(--rgb-primary), 0.1);
   border-radius: 15px;
-  background-color: rgb(var(--secondary));
+  background-color: rgb(var(--rgb-secondary));
   position: relative;
 }
 .loved-img {
@@ -614,20 +613,20 @@ button {
   border-color: var(--accent);
 }
 .loved-btn:is(:hover, :focus) {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   background-color: var(--accent);
 }
 
 /**            footer            */
 .footer {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   background-color: var(--violet);
   padding-top: 50px;
 }
 .footer-top-container {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(var(--secondary), 0.1);
+  border-bottom: 1px solid rgba(var(--rgb-secondary), 0.1);
   padding-bottom: 50px;
 }
 .footer-top-text {
@@ -692,7 +691,7 @@ button {
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(var(--primary), 0.4);
+  background-color: rgba(var(--rgb-primary), 0.4);
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -706,7 +705,7 @@ button {
   transform: scaleY(0);
 }
 .modal {
-  background-color: rgb(var(--page-background));
+  background-color: var(--page-background);
   position: relative;
   width: 517px;
   min-height: 794px; /* don't use just height */
@@ -749,7 +748,7 @@ button {
   display: block;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: rgba(var(--gray), 0.3);
+  color: rgba(var(--rgb-gray), 0.3);
   margin-bottom: 8px;
 }
 .modal-input-wrapper {
@@ -760,7 +759,7 @@ button {
   width: 100%;
   height: 68px;
   border-radius: 13px;
-  border: 1.5px solid rgba(var(--primary), 0.05);
+  border: 1.5px solid rgba(var(--rgb-primary), 0.05);
   background-color: transparent;
   padding: 0px 15px 0px 62px;
   outline: transparent;
@@ -771,7 +770,7 @@ button {
   border-color: var(--accent);
 }
 .modal-input::placeholder {
-  color: rgba(var(--gray), 0.3);
+  color: rgba(var(--rgb-gray), 0.3);
   font-size: 18px;
   letter-spacing: -0.02em;
 }
@@ -783,16 +782,11 @@ button {
   left: 24px;
   top: 50%;
   transform: translateY(-50%);
-  /* Required for correct rendering of defective icons (Handling 'fill' alone is insufficient) */
-  fill: transparent;
-  color: rgb(var(--gray));
-  stroke: rgb(var(--gray));
-  transition-property: color, stroke;
-  transition-duration: var(--duration);
+  color: rgb(var(--rgb-gray));
+  transition: color var(--duration);
 }
 .modal-input:focus + .modal-input-icon {
   color: var(--accent);
-  stroke: var(--accent);
 }
 .modal-textarea-container {
   margin-bottom: 18px;
@@ -816,12 +810,16 @@ button {
 .modal-checkbox:checked + .modal-terms-label span {
   background-color: var(--accent);
   border-color: var(--accent);
-  fill: rgb(var(--secondary));
+  fill: rgb(var(--rgb-secondary));
+  scale: 1.1;
+}
+.modal-checkbox:active + .modal-terms-label span {
+  scale: 0.9;
 }
 .modal-terms-label {
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: rgba(var(--gray), 0.6);
+  color: rgba(var(--rgb-gray), 0.6);
   display: flex;
   align-items: center;
   column-gap: 4px;
@@ -832,7 +830,7 @@ button {
   align-items: center;
   width: 20px;
   height: 20px;
-  border: 1px solid rgba(var(--primary), 0.14);
+  border: 1px solid rgba(var(--rgb-primary), 0.14);
   border-radius: 6px;
   margin-right: 12px;
   fill: transparent;
@@ -851,7 +849,7 @@ button {
   outline: var(--accent) dotted 1px;
 }
 .modal-submit {
-  color: rgb(var(--secondary));
+  color: rgb(var(--rgb-secondary));
   border-color: var(--accent);
   background-color: var(--accent);
 }
