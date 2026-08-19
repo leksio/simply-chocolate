@@ -2,7 +2,7 @@
   --rgb-primary: 17, 17, 17; /*#111111*/
   --rgb-secondary: 255, 255, 255; /*#ffffff*/
   --rgb-gray: 64, 64, 64; /*#404040*/
-  
+
   --page-background: #fafafa;
   --violet: #1e1823;
   --accent: #fd9222;
@@ -223,7 +223,11 @@ button {
   padding: 381px 40px 40px;
   background-color: rgba(var(--rgb-primary), 0.6);
   background-image:
-    linear-gradient(180deg, rgba(var(--rgb-primary), 0), rgba(var(--rgb-primary), 0.4)),
+    linear-gradient(
+      180deg,
+      rgba(var(--rgb-primary), 0),
+      rgba(var(--rgb-primary), 0.4)
+    ),
     var(--hero-bg);
   background-repeat: no-repeat;
   background-position: center;
@@ -683,6 +687,34 @@ button {
 }
 .footer-nav-item .nav-link::after {
   bottom: 66px;
+}
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-subscribe-form {
+  padding-top: 24px;
+}
+.footer-subscribe-input {
+  width: 313px;
+  height: 52px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(var(--rgb-secondary), 0.15);
+  background-color: transparent;
+  padding: 14px 24px;
+  outline: transparent;
+  transition-property: border-color;
+  transition-duration: var(--duration);
+}
+.footer-subscribe-input::placeholder {
+  color: rgba(var(--rgb-secondary), 0.3);
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+.buttons.footer-subscribe-btn {
+  padding: 17px 40px;
+  border-color: var(--accent);
+  background-color: var(--accent);
 }
 
 /**            modal              */
