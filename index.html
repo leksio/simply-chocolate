@@ -741,12 +741,21 @@
             </ul>
           </nav>
           <form class="footer-subscribe-form">
-            <input
-              class="footer-subscribe-input"
-              name="user-email"
-              type="email"
-              placeholder="Enter your email" />
-            <button class="buttons footer-subscribe-btn" type="submit">
+            <div class="footer-input-container">
+              <input
+                class="footer-subscribe-input"
+                id="footer-user-email"
+                name="footer-user-email"
+                type="email"
+                minlength="2"
+                maxlength="30"
+                pattern="^[A-Za-z\s'-]+$"
+                required />
+              <label class="footer-subscribe-label" for="footer-user-email">
+                Enter your email
+              </label>
+            </div>
+            <button class="buttons footer-submit-btn" type="submit">
               Subscribe
             </button>
           </form>
@@ -858,7 +867,7 @@
               </a>
             </label>
           </div>
-          <button class="buttons modal-submit" type="submit">Send</button>
+          <button class="buttons modal-submit-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
