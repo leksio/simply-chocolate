@@ -721,14 +721,6 @@ button {
 .footer-subscribe-input:is(:hover, :focus) {
   border-color: var(--accent);
 }
-.footer-subscribe-input:is(:focus) + .footer-subscribe-label {
-  color: var(--accent);
-  font-size: 14px;
-  top: 0;
-  left: 25px;
-  background-color: var(--purple);
-  padding: 0px 5px;
-}
 .footer-subscribe-label {
   position: absolute;
   top: 50%;
@@ -738,6 +730,15 @@ button {
   letter-spacing: -0.02em;
   color: rgba(var(--rgb-secondary), 0.3);
   transition: all var(--duration);
+}
+.footer-subscribe-input:is(:focus) + .footer-subscribe-label,
+.footer-subscribe-input:not(:placeholder-shown) + .footer-subscribe-label {
+  color: var(--accent);
+  top: 0;
+  left: 25px;
+  font-size: 14px;
+  padding: 0px 5px;
+  background-color: var(--purple);
 }
 .footer-submit-btn {
   padding: 17px 40px;
