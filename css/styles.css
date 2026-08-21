@@ -681,6 +681,10 @@ button {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  transition: color var(--duration);
+}
+.footer-contacts-link:is(:hover, :focus) {
+  color: var(--accent);
 }
 .footer-nav-item .nav-link {
   padding-top: 42px;
