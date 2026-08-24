@@ -853,6 +853,14 @@ button {
 .modal-input:focus + .modal-input-icon {
   color: var(--accent);
 }
+/* invalid */
+.modal-input:not(:placeholder-shown):invalid {
+  border-color: var(--accent-red);
+}
+.modal-input:not(:placeholder-shown):invalid + .modal-input-icon {
+  color: var(--accent-red);
+}
+/*  */
 .modal-textarea-container {
   margin-bottom: 18px;
 }
@@ -888,6 +896,7 @@ button {
   display: flex;
   align-items: center;
   column-gap: 4px;
+  cursor: pointer;
 }
 .modal-terms-label span {
   display: flex;
