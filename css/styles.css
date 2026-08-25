@@ -853,16 +853,12 @@ button {
 .modal-input:focus + .modal-input-icon {
   color: var(--accent);
 }
-/* invalid */
-.modal-input:not(:placeholder-shown):invalid {
-  border-color: var(--accent-red);
-}
-.modal-input:not(:placeholder-shown):invalid + .modal-input-icon {
-  color: var(--accent-red);
-}
-/*  */
 .modal-textarea-container {
   margin-bottom: 18px;
+}
+.modal-textarea-wrapper {
+  display: block;
+  position: relative;
 }
 .modal-textarea {
   display: block;
@@ -870,6 +866,27 @@ button {
   padding: 22px 24px;
   resize: none;
 }
+
+/* invalid */
+.modal-input:not(:placeholder-shown):invalid {
+  border-color: var(--accent-red);
+}
+.modal-input:not(:placeholder-shown):invalid + .modal-input-icon {
+  color: var(--accent-red);
+}
+.modal-input-invalid-icon {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  fill: transparent;
+  transition: fill var(--duration);
+}
+.modal-input:not(:placeholder-shown):invalid ~ .modal-input-invalid-icon {
+  fill: var(--accent-red);
+}
+
+/*  terms  */
 .modal-terms-container {
   margin-bottom: 40px;
 }

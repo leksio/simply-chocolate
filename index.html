@@ -795,6 +795,9 @@
                 aria-hidden="true">
                 <use href="./images/icons.svg#user"></use>
               </svg>
+              <svg class="modal-input-invalid-icon" width="24" height="24">
+                <use href="./images/icons.svg#invalid"></use>
+              </svg>
             </span>
           </label>
           <label class="modal-input-label-container">
@@ -815,6 +818,9 @@
                 height="24"
                 aria-hidden="true">
                 <use href="./images/icons.svg#mail"></use>
+              </svg>
+              <svg class="modal-input-invalid-icon" width="24" height="24">
+                <use href="./images/icons.svg#invalid"></use>
               </svg>
             </span>
           </label>
@@ -837,15 +843,26 @@
                 aria-hidden="true">
                 <use href="./images/icons.svg#phone"></use>
               </svg>
+              <svg class="modal-input-invalid-icon" width="24" height="24">
+                <use href="./images/icons.svg#invalid"></use>
+              </svg>
             </span>
           </label>
           <div class="modal-textarea-container">
             <label for="modal-textarea" class="modal-label">Comment</label>
-            <textarea
-              id="modal-textarea"
-              name="user-comment"
-              class="modal-input modal-textarea"
-              placeholder="Enter text"></textarea>
+            <span class="modal-textarea-wrapper">
+              <textarea
+                id="modal-textarea"
+                name="user-comment"
+                class="modal-input modal-textarea"
+                placeholder="Enter text"
+                minlength="3"
+                maxlength="255"
+                required></textarea>
+              <svg class="modal-input-invalid-icon" width="24" height="24">
+                <use href="./images/icons.svg#invalid"></use>
+              </svg>
+            </span>
           </div>
           <div class="modal-terms-container">
             <!-- This INPUT need to be hidden 
