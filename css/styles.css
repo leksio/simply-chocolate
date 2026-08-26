@@ -301,24 +301,29 @@ button {
 .advantages {
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /*$ padding-top: 50px; */
+  /*$ padding-bottom: 50px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 88px;
+  gap: 20px 88px;
+  /*$ gap: 88px; */
   justify-content: center;
-  padding-right: 18px;
-  padding-left: 18px;
+  /*$ padding-right: 18px; */
+  /*$ padding-left: 18px; */
 }
 .advantages-item {
-  width: calc((100% - 2 * 88px) / 3);
+  width: 100%;
+  /*$ width: calc((100% - 2 * 88px) / 3); */
   position: relative;
 }
 .advantages-item:not(:last-child)::after {
   content: "";
-  /* display: block; dont need when position: absolute; */
+  /*! display: block; don't need when position: absolute; */
+  display: none; /*% for mobile */
   position: absolute;
   right: -44px;
   top: 50%;
