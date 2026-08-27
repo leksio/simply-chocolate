@@ -14,6 +14,12 @@
 
   /* Background Images */
   --hero-bg: url(../images/hero/hero-bg.jpg);
+
+  /* Container configurations */
+  --side-padding: 15px;
+  --mobile-max-width: calc(335px + var(--side-padding) * 2);
+  --tablet-max-width: calc(704px + var(--side-padding) * 2);
+  --desktop-max-width: calc(1136px + var(--side-padding) * 2);
 }
 /*
 /  *,
@@ -93,11 +99,10 @@ button {
 }
 .container {
   width: 100%;
-  max-width: 1166px; /*layout + two paddings 15px*/
-  /* better for flexibility, instead of just "width: 1166px;"*/
+  /* + max-width. it's better  for flexibility, instead of just "width: 1166px;"*/
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: var(--side-padding);
+  padding-left: var(--side-padding);
 }
 .section {
   padding-top: 120px;
@@ -960,3 +965,9 @@ button {
   opacity: 0.5;
   pointer-events: none;
 } */
+
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: var(--mobile-max-width);
+  }
+}
