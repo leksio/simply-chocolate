@@ -21,6 +21,7 @@
   --tablet-max-width: calc(704px + var(--side-padding) * 2);
   --desktop-max-width: calc(1136px + var(--side-padding) * 2);
 }
+
 /*
 /  *,
 /  *::before,
@@ -306,8 +307,6 @@ button {
 .advantages {
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
-  /*$ padding-top: 50px; */
-  /*$ padding-bottom: 50px; */
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -975,5 +974,15 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     max-width: var(--tablet-max-width);
+  }
+  .advantages {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .advantages-list {
+    gap: 32px;
+  }
+  .advantages-item {
+    width: calc((100% - 32px) / 2);
   }
 }
