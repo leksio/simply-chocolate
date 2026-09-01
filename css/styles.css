@@ -100,10 +100,10 @@ button {
 }
 .container {
   width: 100%;
+  max-width: var(--mobile-max-width);
   /* + max-width. it's better  for flexibility, instead of just "width: 1166px;"*/
+  padding: 0 var(--side-padding);
   margin: 0 auto;
-  padding-right: var(--side-padding);
-  padding-left: var(--side-padding);
 }
 .section {
   padding-top: 120px;
@@ -307,34 +307,16 @@ button {
 .advantages {
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 30px 0;
 }
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 88px;
-  /*$ gap: 88px; */
-  justify-content: center;
-  /*$ padding-right: 18px; */
-  /*$ padding-left: 18px; */
+  row-gap: 30px;
 }
 .advantages-item {
-  width: 100%;
-  /*$ width: calc((100% - 2 * 88px) / 3); */
   position: relative;
-}
-.advantages-item:not(:last-child)::after {
-  content: "";
-  /*! display: block; don't need when position: absolute; */
-  display: none; /*% for mobile */
-  position: absolute;
-  right: -44px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 124px;
-  width: 1px;
-  background-color: rgba(var(--rgb-secondary), 0.5);
+  width: 100%;
 }
 .advantages-icon-container {
   width: 62px;
@@ -965,24 +947,42 @@ button {
   pointer-events: none;
 } */
 
-@media screen and (min-width: 375px) {
-  .container {
-    max-width: var(--mobile-max-width);
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: var(--tablet-max-width);
   }
   .advantages {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
   .advantages-list {
-    gap: 32px;
+    gap: 45px 60px;
   }
   .advantages-item {
-    width: calc((100% - 32px) / 2);
+    width: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 1166px) {
+  .container {
+    max-width: var(--desktop-max-width);
+  }
+  .advantages-list {
+    column-gap: 88px;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .advantages-item {
+    width: calc((100% - 88px * 2) / 3);
+  }
+  .advantages-item:not(:last-child)::after {
+    /*! display: block; don't need when position: absolute; */
+    position: absolute;
+    content: "";
+    right: -44px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 124px;
+    width: 1px;
+    background-color: rgba(var(--rgb-secondary), 0.5);
   }
 }
