@@ -58,15 +58,15 @@ ul {
   padding-left: 0;
   list-style: none;
 }
-a,
-img,
-svg {
-  display: block;
-}
 a {
   color: inherit; /* currentColor!? */
   text-decoration: none;
   outline: none;
+}
+a,
+img,
+svg {
+  display: block;
 }
 img {
   max-width: 100%;
@@ -106,16 +106,15 @@ button {
   margin: 0 auto;
 }
 .section {
-  padding-top: 120px;
+  padding-top: 80px;
 }
 .section-title {
-  font-size: 24px;
   font-weight: 600;
-  line-height: 1.17;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 50px;
 }
 .section-title span {
   color: var(--accent);
@@ -307,7 +306,7 @@ button {
 .advantages {
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
-  padding: 30px 0;
+  padding: 40px 0;
 }
 .advantages-list {
   display: flex;
@@ -341,23 +340,23 @@ button {
 
 /**            taste            */
 .taste-title {
-  margin-bottom: 28px;
+  max-width: 283px;
+  margin: 0 auto 24px;
 }
 .taste-main-text {
   text-align: center;
-  max-width: 486px;
-  margin: 0 auto 50px;
+  margin: 0 auto 32px;
 }
 .taste-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 32px;
+  gap: 20px;
 }
 .taste-item {
-  width: calc((100% - 3 * 32px) / 4);
+  width: 100%;
   border: 1px solid var(--accent);
   border-radius: 15px;
-  padding: 29px 23px;
+  padding: 27px 28px;
   position: relative;
   overflow: hidden;
 }
@@ -385,7 +384,7 @@ button {
 }
 .taste-img {
   height: 160px;
-  margin-bottom: 36px;
+  margin: 0 auto 25px;
 }
 .taste-item-name {
   font-weight: 600;
@@ -396,10 +395,6 @@ button {
   font-size: 14px;
   letter-spacing: -0.02em;
 }
-.taste-item-name.overlay {
-  font-size: 18px;
-  letter-spacing: -0.03em;
-}
 .taste-overlay-container {
   position: absolute;
   top: 0;
@@ -407,21 +402,25 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  padding: 20px 15px;
+  padding: 28px;
   background-color: rgb(var(--rgb-secondary));
   transform: translateY(101%);
   transition: transform var(--duration);
   display: flex;
   flex-direction: column;
 }
+.taste-item-name.overlay {
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
 .taste-item:hover .taste-overlay-container {
   transform: translateY(0);
 }
-.taste-buttnos-container {
+.taste-buttons-container {
   display: flex;
   gap: 6px;
   padding-top: 8px;
-  padding-bottom: 10px;
+  padding-bottom: 14px;
 }
 .taste-btn {
   font-size: 10px;
@@ -441,8 +440,12 @@ button {
 /**            made              */
 .made-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   /* "space-between" only works when all elements have a specified width */
+}
+.made-title {
+  margin-bottom: 32px;
 }
 .made-img {
   background-color: rgba(var(--rgb-primary), 0.4);
@@ -452,7 +455,7 @@ button {
   background-color: rgb(var(--rgb-secondary));
   max-width: 516px;
   border-radius: 15px;
-  padding: 32px;
+  padding: 20px 14px;
 }
 .made-text {
   font-weight: 600;
@@ -462,7 +465,7 @@ button {
   margin-bottom: 28px;
 }
 .made-list {
-  width: 428px;
+  max-width: 428px;
 }
 .made-item {
   position: relative;
@@ -946,43 +949,3 @@ button {
   opacity: 0.5;
   pointer-events: none;
 } */
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: var(--tablet-max-width);
-  }
-  .advantages {
-    padding: 50px 0;
-  }
-  .advantages-list {
-    gap: 45px 60px;
-  }
-  .advantages-item {
-    width: calc((100% - 60px) / 2);
-  }
-}
-
-@media screen and (min-width: 1166px) {
-  .container {
-    max-width: var(--desktop-max-width);
-  }
-  .advantages-list {
-    column-gap: 88px;
-    padding-right: 17px;
-    padding-left: 17px;
-  }
-  .advantages-item {
-    width: calc((100% - 88px * 2) / 3);
-  }
-  .advantages-item:not(:last-child)::after {
-    /*! display: block; don't need when position: absolute; */
-    position: absolute;
-    content: "";
-    right: -44px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 124px;
-    width: 1px;
-    background-color: rgba(var(--rgb-secondary), 0.5);
-  }
-}

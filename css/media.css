@@ -1,0 +1,89 @@
+/*&     TABLET     */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: var(--tablet-max-width);
+  }
+  .section-title {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  /*%    ADVANTAGES tablet    */
+  .advantages {
+    padding: 50px 0;
+  }
+  .advantages-list {
+    gap: 45px 60px;
+  }
+  .advantages-item {
+    width: calc((100% - 60px) / 2);
+  }
+  /*%    TASTE tablet    */
+  .taste-title {
+    max-width: 411px;
+    margin-bottom: 28px;
+  }
+  .taste-main-text {
+    max-width: 486px;
+    margin-bottom: 50px;
+  }
+  .taste-list {
+    gap: 32px;
+  }
+  .taste-item {
+    width: calc((100% - 32px) / 2);
+  }
+  /*%    MADE tablet    */
+  .made-title {
+    margin-bottom: 50px;
+  }
+  .made-text-container {
+    padding: 32px;
+  }
+}
+
+/*&     DESKTOP      */
+@media screen and (min-width: 1166px) {
+  .container {
+    max-width: var(--desktop-max-width);
+  }
+  .section {
+    padding-top: 100px;
+  }
+  /*%    ADVANTAGES desktop    */
+  .advantages-list {
+    column-gap: 88px;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .advantages-item {
+    width: calc((100% - 88px * 2) / 3);
+  }
+  .advantages-item:not(:last-child)::after {
+    /* display: block; don't need when position: absolute; */
+    position: absolute;
+    content: "";
+    right: -44px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 124px;
+    width: 1px;
+    background-color: rgba(var(--rgb-secondary), 0.5);
+  }
+  /*%    TASTE desktop    */
+  .taste-list {
+    row-gap: 24px;
+  }
+  .taste-item {
+    width: calc((100% - 32px * 3) / 4);
+    padding: 29px 23px;
+  }
+  .taste-img {
+    margin-bottom: 36px;
+  }
+  .taste-overlay-container {
+    padding: 20px 15px;
+  }
+  .taste-buttons-container {
+    padding-bottom: 10px;
+  }
+}
