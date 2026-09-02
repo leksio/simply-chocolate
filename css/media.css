@@ -3,6 +3,9 @@
   .container {
     max-width: var(--tablet-max-width);
   }
+  .section {
+    padding-top: 100px;
+  }
   .section-title {
     font-size: 24px;
     line-height: 1.17;
@@ -36,8 +39,38 @@
   .made-title {
     margin-bottom: 50px;
   }
+  .made-img {
+    width: 100%; /*! temporarily*/
+  }
   .made-text-container {
     padding: 32px;
+  }
+  .made-text {
+    max-width: 350px;
+    margin-bottom: 28px;
+  }
+  .made-list {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1165px) {
+  /*$    TASTE tablet    */
+  .taste-item:nth-child(2) {
+    order: 3;
+  }
+  .taste-item:nth-child(3) {
+    order: 4;
+  }
+  .taste-item:nth-child(4) {
+    order: 2;
+  }
+  .taste-item:nth-child(n + 5) {
+    order: 5;
+  }
+  /*$    MADE tablet    */
+  #made > .container {
+    max-width: 644px;
   }
 }
 
@@ -45,9 +78,6 @@
 @media screen and (min-width: 1166px) {
   .container {
     max-width: var(--desktop-max-width);
-  }
-  .section {
-    padding-top: 100px;
   }
   /*%    ADVANTAGES desktop    */
   .advantages-list {
@@ -85,5 +115,24 @@
   }
   .taste-buttons-container {
     padding-bottom: 10px;
+  }
+  /*%    MADE desktop    */
+  .made-container {
+    display: flex;
+    justify-content: space-between;
+    /* "space-between" only works when all elements have a specified width */
+  }
+  .made-img {
+    width: unset; /*initial; auto;*/
+    margin-bottom: 0;
+  }
+  .made-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .made-text-container {
+    width: 516px;
+  }
+  .made-list {
+    max-width: 428px;
   }
 }
