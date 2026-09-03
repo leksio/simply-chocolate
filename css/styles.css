@@ -561,20 +561,21 @@ button {
 
 /**            loved             */
 #loved {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
   text-align: center;
 }
 .section-title.loved-title {
-  margin-bottom: 91px;
+  margin-bottom: 74px;
 }
 .loved-list {
-  margin-bottom: 50px;
   display: flex;
-  gap: 28px;
+  flex-wrap: wrap;
+  row-gap: 64px;
+  margin-bottom: 32px;
 }
 .loved-item {
-  width: calc((100% - 2 * 28px) / 3);
-  padding: 56px 24px 24px;
+  width: 100%;
+  padding: 56px 18px 18px;
   border: 1px solid rgba(var(--rgb-primary), 0.1);
   border-radius: 15px;
   background-color: rgb(var(--rgb-secondary));
@@ -599,7 +600,7 @@ button {
   letter-spacing: -0.02em;
 }
 .loved-btn {
-  font-size: 18px;
+  font-size: 14px;
   border-color: var(--accent);
 }
 .loved-btn:is(:hover, :focus) {
