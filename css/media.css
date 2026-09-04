@@ -70,6 +70,15 @@
   .loved-btn {
     font-size: 18px;
   }
+  /*%    FOOTER tablet    */
+  .footer {
+    padding-top: 50px;
+  }
+  .footer-top-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1165px) {
@@ -164,4 +173,5 @@
     width: calc((100% - 28px * 2) / 3);
     padding: 56px 24px 24px;
   }
+  /*%    FOOTER tablet    */
 }

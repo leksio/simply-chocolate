@@ -612,13 +612,11 @@ button {
 .footer {
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
-  padding-top: 50px;
+  padding-top: 32px;
 }
 .footer-top-container {
-  display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid rgba(var(--rgb-secondary), 0.1);
-  padding-bottom: 50px;
+  padding-bottom: 32px;
 }
 .footer-top-text {
   font-weight: 500;
