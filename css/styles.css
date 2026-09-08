@@ -215,12 +215,12 @@ button {
   display: flex;
 }
 .social-link {
-  padding-top: 24px;
-  padding-bottom: 32px;
-  padding-left: 7px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 6px;
 }
-.social-item:not(:last-child) .social-link {
-  padding-right: 7px;
+.social-item:not(:first-child) .social-link {
+  padding-left: 6px;
 }
 .social-icon {
   transition-property: color, transform;
@@ -641,14 +641,6 @@ button {
   font-size: 14px;
   line-height: 1.29;
 }
-.social-link.footer-paddings {
-  padding-top: 14px;
-  padding-bottom: 16px;
-}
-.footer-communication-container .social-item:last-child .social-link {
-  padding-right: 7px;
-}
-
 .footer-contacts {
   margin-top: 14px;
   font-style: normal;
@@ -665,6 +657,14 @@ button {
 .footer-contacts-link:is(:hover, :focus) {
   color: var(--accent);
 }
+.social-link.footer-paddings {
+  padding-top: 14px;
+  padding-bottom: 16px;
+}
+.footer-communication-container .social-item:last-child .social-link {
+  padding-right: 7px;
+}
+
 .footer-nav-item .nav-link {
   padding-top: 42px;
   padding-bottom: 68px;
