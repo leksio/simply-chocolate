@@ -10,18 +10,30 @@
     font-size: 24px;
     line-height: 1.17;
   }
+  .nav-link::after {
+    background-color: currentColor;
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    bottom: 34px;
+    transform: scaleX(0);
+    transition: transform var(--duration);
+  }
+  .nav-link:is(:hover, :focus)::after {
+    transform: scaleX(1);
+  }
   /*%    HEADER tablet    */
   .social-link {
     padding-top: 24px;
     padding-bottom: 32px;
-    padding-left: 7px;
   }
-  .social-item:not(:last-child) .social-link {
-    padding-right: 7px;
+  .header-container .social-item:last-child .social-link {
+    padding-right: 0px;
   }
-  .social-icon {
-    width: 24px;
-    height: 24px;
+  .social-item:first-child .social-link {
+    padding-left: 6px;
   }
   /*%    ADVANTAGES tablet    */
   .advantages {
@@ -106,6 +118,39 @@
   .footer-communication-container > :first-child {
     order: 2;
   }
+  .footer-bottom-container {
+    flex-direction: row;
+    row-gap: unset; /*initial; auto;*/
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .footer-bottom-container .nav-list {
+    flex-direction: row;
+  }
+  .footer-nav-item .nav-link {
+    padding: 42px 12px 68px;
+  }
+  .footer-nav-item:first-child .nav-link {
+    padding-left: 0px;
+  }
+  .footer-nav-item:first-child .nav-link::after {
+    left: 3px;
+  }
+  .footer-nav-item .nav-link::after {
+    bottom: 66px;
+  }
+
+  .footer-subscribe-form {
+    padding-top: 24px;
+  }
+  .footer-subscribe-input {
+    width: 233px;
+  }
+  .footer-submit-btn {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1165px) {
@@ -126,12 +171,28 @@
   #made > .container {
     max-width: 644px;
   }
+  /*$    FOOTER tablet    */
+  /* .footer-nav-item:nth-last-child(-n + 2) {
+    display: none;
+  } */
+  .footer-nav-item:nth-child(n + 4) {
+    display: none;
+  }
+  /**/
 }
 
 /*&       DESKTOP      */
 @media screen and (min-width: 1166px) {
   .container {
     max-width: var(--desktop-max-width);
+  }
+  /*%    HEADER desktop    */
+  .social-link {
+    padding-left: 7px;
+  }
+  .social-icon {
+    width: 24px;
+    height: 24px;
   }
   /*%    ADVANTAGES desktop    */
   .advantages-list {
@@ -201,4 +262,14 @@
     padding: 56px 24px 24px;
   }
   /*%    FOOTER desktop    */
+  .social-item:not(:last-child) .social-link {
+    padding-right: 7px;
+  }
+  .footer-subscribe-input {
+    width: 313px;
+    height: 52px;
+  }
+  .footer-submit-btn {
+    padding: 17px 40px;
+  }
 }
