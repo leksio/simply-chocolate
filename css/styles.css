@@ -131,21 +131,6 @@ button {
   line-height: 1.29;
   letter-spacing: -0.02em;
 }
-.nav-list {
-  display: flex;
-}
-.nav-link {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  padding: 28px 12px 36px;
-  transition: color var(--duration);
-  position: relative;
-}
-.nav-link:is(:hover, :focus) {
-  color: var(--accent);
-}
 .buttons {
   font-size: 14px;
   font-weight: 600;
@@ -196,6 +181,21 @@ button {
 }
 .header-logo-accent {
   font-style: italic;
+}
+.nav-list {
+  display: flex;
+}
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  padding: 28px 12px 36px;
+  transition: color var(--duration);
+  position: relative;
+}
+.nav-link:is(:hover, :focus) {
+  color: var(--accent);
 }
 .socials-list {
   display: flex;
@@ -643,13 +643,10 @@ button {
 .footer-contacts-link:is(:hover, :focus) {
   color: var(--accent);
 }
-.social-link.footer-paddings {
+.footer-social-link {
   padding-top: 14px;
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
-/* .footer-communication-container .social-item:last-child .social-link {
-  padding-right: 6px;
-} */
 .footer-bottom-container .nav-list {
   flex-direction: column;
 }
@@ -663,7 +660,12 @@ button {
   padding-top: 23px;
   padding-bottom: 32px;
 }
-.footer-input-container {
+.footer-subscribe-form {
+  display: flex;
+  column-gap: 8px;
+  align-items: flex-start;
+}
+.footer-input-wrapper {
   position: relative;
   display: inline-block;
 }
@@ -675,7 +677,6 @@ button {
   background-color: transparent;
   color: inherit;
   padding: 14px 24px;
-  margin-right: 8px;
   outline: transparent;
   transition: all var(--duration);
 }
@@ -687,7 +688,7 @@ button {
   top: 50%;
   left: 24px;
   transform: translateY(-50%);
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: -0.02em;
   color: rgba(var(--rgb-secondary), 0.3);
   transition: all var(--duration);
