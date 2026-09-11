@@ -116,7 +116,7 @@
     padding-left: 7px;
   }
   .footer-communication-container > :first-child {
-    order: 2;
+    order: initial; /*2;*/
   }
   .footer-social-link {
     padding-top: 14px;
@@ -148,6 +148,7 @@
     padding-top: 24px;
   }
   .footer-subscribe-input {
+    max-width: none;
     width: 233px;
   }
   .footer-submit-btn {

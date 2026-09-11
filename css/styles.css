@@ -622,6 +622,9 @@ button {
   flex-direction: column;
   row-gap: 32px;
 }
+.footer-communication-container > :first-child {
+  order: 2;
+}
 .footer-communication-text {
   font-weight: 500;
   font-size: 14px;
@@ -670,7 +673,8 @@ button {
   display: inline-block;
 }
 .footer-subscribe-input {
-  width: 207px;
+  width: 100%;
+  max-width: 207px;
   height: 45px;
   border-radius: 30px;
   border: 1.5px solid rgba(var(--rgb-secondary), 0.15);
