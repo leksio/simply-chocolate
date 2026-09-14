@@ -10,7 +10,7 @@
     font-size: 24px;
     line-height: 1.17;
   }
-  /*%    HEADER tablet    */
+  /*%    HEADER tablet   */
   /* .nav-link::after {
     background-color: currentColor;
     content: "";
@@ -77,6 +77,8 @@
   .made-list {
     max-width: 480px;
   }
+  /*%   SELLERS tablet    */
+
   /*%    LOVED tablet    */
   #loved {
     padding-bottom: 100px;
