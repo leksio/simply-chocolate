@@ -238,11 +238,11 @@ button {
   border-radius: 30px;
 }
 .hero h1 {
-  font-size: 28px;
   font-weight: 500;
-  line-height: 1.21;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
-  max-width: 484px;
+  max-width: 295px;
   margin-bottom: 32px;
 }
 .hero-buttons-container {
