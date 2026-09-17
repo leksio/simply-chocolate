@@ -137,7 +137,7 @@ button {
   border-style: solid;
   border-width: 1px;
   border-radius: 100px;
-  padding: 14px 40px;
+  padding: 12px 27px;
   transition: all var(--duration);
 }
 .hero-btn-buy:is(:hover, :focus),
@@ -223,7 +223,7 @@ button {
   padding-bottom: 80px;
 }
 .hero-container {
-  padding: 381px 40px 40px;
+  padding: 395px 20px 20px;
   background-color: rgba(var(--rgb-primary), 0.6);
   background-image:
     linear-gradient(
@@ -247,12 +247,13 @@ button {
 }
 .hero-buttons-container {
   display: flex;
+  gap: 10px 14px;
+  flex-wrap: wrap;
   align-items: center;
 }
 .hero-btn-buy {
   border-color: var(--accent);
   background-color: var(--accent);
-  margin-right: 14px;
 }
 .hero-link-made {
   border-color: currentColor;
@@ -261,13 +262,14 @@ button {
   color: var(--accent);
 }
 .hero-link-down {
-  font-size: 14px;
   font-weight: 500;
-  line-height: 1.29;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: -0.03em;
-  margin-left: auto;
+  margin-top: 22px;
+  /* margin-left: auto; */
   display: flex;
-  gap: 14px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   transition: color var(--duration);
@@ -276,7 +278,7 @@ button {
   color: var(--accent);
 }
 .down-icon-container {
-  padding: 8px;
+  padding: 6px;
   border-radius: 50%;
   background-color: currentColor;
 }
