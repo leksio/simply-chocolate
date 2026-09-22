@@ -1,5 +1,10 @@
 /*&       TABLET      */
 @media screen and (min-width: 768px) {
+  :root {
+    --hero-bg: url(../images/hero/hero-bg-tab.jpg);
+    --hero-bg-2x: url(../images/hero/hero-bg-tab-2x.jpg);
+    --hero-bg-3x: url(../images/hero/hero-bg-tab-3x.jpg);
+  }
   .container {
     max-width: var(--tablet-max-width);
   }
@@ -41,13 +46,6 @@
   /*%    HERO tablet    */
   .hero-container {
     padding: 671px 40px 40px;
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(var(--rgb-primary), 0),
-        rgba(var(--rgb-primary), 0.4)
-      ),
-      var(--hero-bg-tab);
   }
   .hero h1 {
     font-size: 28px;
@@ -235,6 +233,11 @@
 
 /*&       DESKTOP      */
 @media screen and (min-width: 1166px) {
+  :root {
+    --hero-bg: url(../images/hero/hero-bg-desk.jpg);
+    --hero-bg-2x: url(../images/hero/hero-bg-desk-2x.jpg);
+    --hero-bg-3x: url(../images/hero/hero-bg-desk-3x.jpg);
+  }
   .container {
     max-width: var(--desktop-max-width);
   }
@@ -250,13 +253,6 @@
   /*%    HERO desktop    */
   .hero-container {
     padding-top: 381px;
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(var(--rgb-primary), 0),
-        rgba(var(--rgb-primary), 0.4)
-      ),
-      var(--hero-bg-desk);
   }
   /*%    ADVANTAGES desktop    */
   .advantages-list {
@@ -356,5 +352,21 @@
   }
   .footer-submit-btn {
     padding: 17px 40px;
+  }
+}
+
+/*&      DEVECE PIXEL RATIO      */
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  :root {
+    --hero-bg: var(--hero-bg-2x);
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 3dppx),
+  (min-resolution: 288dpi) {
+  :root {
+    --hero-bg: var(--hero-bg-3x);
   }
 }

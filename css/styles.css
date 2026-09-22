@@ -13,9 +13,9 @@
   --duration: 290ms;
 
   /* Background Images */
-  --hero-bg-mob: url(../images/hero/hero-bg-mob.jpg);
-  --hero-bg-tab: url(../images/hero/hero-bg-tab.jpg);
-  --hero-bg-desk: url(../images/hero/hero-bg-desk.jpg);
+  --hero-bg: url(../images/hero/hero-bg-mob.jpg);
+  --hero-bg-2x: url(../images/hero/hero-bg-mob-2x.jpg);
+  --hero-bg-3x: url(../images/hero/hero-bg-mob-3x.jpg);
 
   /* Container configurations */
   --side-padding: 15px;
@@ -233,7 +233,7 @@ button {
       rgba(var(--rgb-primary), 0),
       rgba(var(--rgb-primary), 0.4)
     ),
-    var(--hero-bg-mob);
+    var(--hero-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
