@@ -430,17 +430,34 @@
             <span>made?</span>
           </h2>
           <div class="made-container">
-            <img
-              class="made-img"
-              srcset="
-                ./images/made/made-mob.jpg    1x,
-                ./images/made/made-mob-2x.jpg 2x,
-                ./images/made/made-mob-3x.jpg 3x
-              "
-              src="./images/made/made-mob.jpg"
-              alt="liquid chocolate"
-              width="600"
-              height="400" />
+            <picture>
+              <source
+                srcset="
+                  ./images/made/made-desk.jpg    1x,
+                  ./images/made/made-desk-2x.jpg 2x,
+                  ./images/made/made-desk-3x.jpg 3x
+                "
+                media="(min-width: 1166px)" />
+              <source
+                srcset="
+                  ./images/made/made-tab.jpg    1x,
+                  ./images/made/made-tab-2x.jpg 2x,
+                  ./images/made/made-tab-3x.jpg 3x
+                "
+                media="(min-width: 768px)" />
+              <source
+                srcset="
+                  ./images/made/made-mob.jpg    1x,
+                  ./images/made/made-mob-2x.jpg 2x,
+                  ./images/made/made-mob-3x.jpg 3x
+                "
+                media="(max-width: 767px)" />
+              <img
+                class="made-img"
+                src="./images/made/made-mob.jpg"
+                alt="liquid chocolate"
+                width="614" />
+            </picture>
             <div class="made-text-container">
               <p class="made-text">
                 Try our chocolates today and discover the perfect balance of
