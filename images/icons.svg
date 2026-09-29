@@ -68,5 +68,9 @@
     <symbol id="invalid" viewBox="0 0 32 32">
       <path d="M14.4 20.8h3.2v3.2h-3.2v-3.2zM14.4 8h3.2v9.6h-3.2v-9.6zM15.984 0c-8.832 0-15.984 7.168-15.984 16s7.152 16 15.984 16c8.848 0 16.016-7.168 16.016-16s-7.168-16-16.016-16zM16 28.8c-7.072 0-12.8-5.728-12.8-12.8s5.728-12.8 12.8-12.8 12.8 5.728 12.8 12.8-5.728 12.8-12.8 12.8z"></path>
     </symbol>
+     <symbol id="play" viewBox="0 0 32 32">
+      <path fill="#f5f4f4" style="fill: var(--color1, #f5f4f4)" d="M10.909 24v-15.273l14.545 7.636-14.545 7.636z"></path>
+      <path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.7273" d="M31.636 16c0 8.636-7.001 15.636-15.636 15.636s-15.636-7.001-15.636-15.636c0-8.636 7.001-15.636 15.636-15.636s15.636 7.001 15.636 15.636z"></path>
+    </symbol>
   </defs>
 </svg>

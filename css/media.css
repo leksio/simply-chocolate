@@ -94,9 +94,6 @@
   .made-title {
     margin-bottom: 50px;
   }
-  .made-img {
-    width: 100%; /*! temporarily*/
-  }
   .made-text-container {
     padding: 32px;
   }
@@ -297,9 +294,10 @@
     justify-content: space-between;
     /* "space-between" only works when all elements have a specified width */
   }
-  .made-img {
-    width: unset; /*initial; auto;*/
+  .made-img-wrapper {
     margin-bottom: 0;
+    width: 600px;
+    /* width: unset; initial; auto; */
   }
   .made-item:not(:last-child) {
     margin-bottom: 24px;
