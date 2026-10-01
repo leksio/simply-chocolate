@@ -223,6 +223,26 @@ button {
   transition-property: color, transform;
   transition-duration: var(--duration);
 }
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  padding: 20px;
+  color: rgb(var(--rgb-secondary));
+  background-color: var(--purple);
+}
+.close-btn .mob-menu-close-btn {
+  /* color: inherit; */
+}
+.mob-menu-nav .nav-list {
+  flex-direction: column;
+}
+.mob-menu-nav .nav-link {
+  padding: 9px 0;
+}
 /**            hero               */
 .hero {
   color: rgb(var(--rgb-secondary));
@@ -765,7 +785,7 @@ button {
   overflow: hidden;
   padding: 40px;
 }
-.modal-close-btn {
+.close-btn {
   border: none;
   background-color: transparent;
   border-bottom-left-radius: 15px;
@@ -779,7 +799,7 @@ button {
   transition-property: color;
   transition-duration: var(--duration);
 }
-.modal-close-btn:is(:hover, :focus) {
+.close-btn:is(:hover, :focus) {
   color: var(--accent);
 }
 .section-title.modal-title {
