@@ -230,18 +230,18 @@ button {
   width: 220px;
   height: 100vh;
   z-index: 2;
-  padding: 87px 0px 0px 0px;
+  padding: 87px 0 0 20px;
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
-}
-.close-btn .mob-menu-close-btn {
-  /* color: inherit; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .mob-menu-nav .nav-list {
   flex-direction: column;
 }
 .mob-menu-nav .nav-link {
-  padding: 12px 0 12px 48px;
+  padding: 12px 0 12px 28px;
 }
 /**            hero               */
 .hero {
