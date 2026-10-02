@@ -226,11 +226,11 @@ button {
 .mob-menu {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
+  right: 0;
+  width: 220px;
   height: 100vh;
   z-index: 2;
-  padding: 20px;
+  padding: 87px 0px 0px 0px;
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
 }
@@ -241,7 +241,7 @@ button {
   flex-direction: column;
 }
 .mob-menu-nav .nav-link {
-  padding: 9px 0;
+  padding: 12px 0 12px 48px;
 }
 /**            hero               */
 .hero {
