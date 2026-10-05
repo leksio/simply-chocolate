@@ -223,7 +223,7 @@ button {
   transition-property: color, transform;
   transition-duration: var(--duration);
 }
-.mob-menu {
+.menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -237,10 +237,10 @@ button {
   flex-direction: column;
   justify-content: space-between;
 }
-.mob-menu-nav .nav-list {
+.menu-nav .nav-list {
   flex-direction: column;
 }
-.mob-menu-nav .nav-link {
+.menu-nav .nav-link {
   padding: 12px 0 12px 28px;
 }
 /**            hero               */
