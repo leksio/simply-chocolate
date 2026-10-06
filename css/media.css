@@ -55,7 +55,8 @@
   .header-container .social-item:last-child .social-link {
     padding-right: 0px;
   }
-  .menu-open-btn {
+  .menu-open-btn,
+  .menu {
     display: none;
   }
   /*%    HERO tablet    */

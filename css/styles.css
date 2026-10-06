@@ -227,15 +227,22 @@ button {
   position: fixed;
   top: 0;
   right: 0;
-  width: 220px;
+  width: clamp(220px, 50vw, 380px);
   height: 100vh;
   z-index: 2;
-  padding: 87px 0 0 20px;
+  padding: 87px 0 0 clamp(20px, 5vw, 50px);
   color: rgb(var(--rgb-secondary));
   background-color: var(--purple);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition:
+    opacity 500ms,
+    transform 500ms,
+    visibility 500ms;
+}
+.menu.is-hidden {
+  transform: translateX(100%);
 }
 .menu-nav .nav-list {
   flex-direction: column;
