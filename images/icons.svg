@@ -38,9 +38,15 @@
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M29.333 8 16 17.333 2.667 8"/>
     </symbol>
 
-    <symbol id="menu" viewBox="0 0 32 32">
+    <!-- <symbol id="menu" viewBox="0 0 32 32">
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.783" d="M1.391 16h29.217M1.391 6.261h29.217M1.391 25.739h29.217"/>
+    </symbol> -->
+    <symbol id="menu" viewBox="0 0 46 32">
+      <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M2 16h42M2 2h42M2 30h42"></path>
     </symbol>
+      <!-- <symbol id="menu" viewBox="0 0 48 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M3 16h42M3 2h42M3 30h42"></path>
+    </symbol> -->
 
     <symbol id="phone" viewBox="0 0 32 32">
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M29.333 22.56v4a2.655 2.655 0 0 1-1.812 2.537 2.7 2.7 0 0 1-1.094.13 26.4 26.4 0 0 1-11.507-4.093 26 26 0 0 1-8-8 26.4 26.4 0 0 1-4.093-11.56 2.66 2.66 0 0 1 .687-2.038 2.66 2.66 0 0 1 1.967-.868h4a2.67 2.67 0 0 1 2.667 2.294 17.2 17.2 0 0 0 .933 3.747 2.68 2.68 0 0 1-.6 2.814l-1.693 1.693a21.33 21.33 0 0 0 8 8l1.693-1.693c.362-.359.82-.606 1.319-.712s1.017-.067 1.495.112c1.21.451 2.467.765 3.747.933a2.665 2.665 0 0 1 2.293 2.707z"/>

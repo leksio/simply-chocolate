@@ -223,6 +223,21 @@ button {
   transition-property: color, transform;
   transition-duration: var(--duration);
 }
+.menu-open-btn {
+  border: none;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 4px 20px;
+}
+.menu-open-icon {
+  transition: transform var(--duration);
+}
+.menu-open-btn:is(:hover, :focus) .menu-open-icon {
+  transform: scale(1.15);
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -779,18 +794,20 @@ button {
   transform: scaleY(0);
 }
 .modal {
-  background-color: var(--page-background);
   position: relative;
-  width: 517px;
-  min-height: 794px; /* don't use just height */
-  border-radius: 15px;
   /* position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%; */
   margin: auto;
-  overflow: hidden;
   padding: 40px;
+  max-width: 517px;
+  height: 794px;
+  max-height: 95dvh;
+  overflow-y: auto;
+  /* overflow: hidden; */
+  border-radius: 15px;
+  background-color: var(--page-background);
 }
 .close-btn {
   border: none;
